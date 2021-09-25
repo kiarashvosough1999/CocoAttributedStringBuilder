@@ -11,6 +11,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- - [License](#license)
 
 ## Features
 
@@ -35,3 +36,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 ```ruby
 pod 'CocoAttributedStringBuilder'
 ```
+
+## License
+
+CocoAttributedStringBuilder is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
