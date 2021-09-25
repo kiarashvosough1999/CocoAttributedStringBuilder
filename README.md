@@ -24,7 +24,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| iOS 9.0+ | 5.1 | [CocoaPods](#cocoapods), [Manual](#manually) | Not Tested |
+| iOS 9.0+ | 5.1 | [CocoaPods](#cocoapods) | Not Tested |
 
 ## Installation
 
