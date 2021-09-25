@@ -28,7 +28,7 @@
 
 import UIKit
 
-public enum StringTextAttachment: SpecificAppliableAttributes {
+public enum CocoAttachment: SpecificAppliableAttributes {
     
     case content(Data,String)
     case contents(Data)
@@ -54,26 +54,26 @@ public enum StringTextAttachment: SpecificAppliableAttributes {
                 object.fileWrapper = wrapper
         }
     }
-    
 }
 
-public struct TextAttachment: NSAttributedStringKeyValueConvertible {
+public final class TextAttachment: AttributeKeyValueConvertible {
     
-    @AttributedStringTextAttachmentBuilder internal var builder: StringKeyValueAttribute.BuilderBlock
+    public var attribute: CocoStringAttributeHolder
     
-    public init(@AttributedStringTextAttachmentBuilder _ builder: @escaping StringKeyValueAttribute.BuilderBlock) {
-        self.builder = builder
+    public init(@TextAttachmentBuilder _ builder: BuilderBlock) {
+        self.attribute = builder()
     }
     
-    public func asKeyValue() -> KeyValue {
-        builder().asKeyValue()
+    public func on(_ range: Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
     }
 }
 
 @resultBuilder
-public struct AttributedStringTextAttachmentBuilder {
+public struct TextAttachmentBuilder {
     
-    public static func buildBlock(_ components: StringTextAttachment...) -> StringKeyValueAttribute {
-        .init(key: .attachment, value: NSTextAttachment(with: components))
+    public static func buildBlock(_ components: CocoAttachment...) -> CocoStringAttributeHolder {
+        .attribute(key: .attachment, value: NSTextAttachment(with: components))
     }
 }

@@ -58,20 +58,25 @@ final class ViewController: UIViewController {
     fileprivate func addViews() {
         view.addSubview(label)
     }
-
-    @AttributedStringBuilder
+    
+    @CocoAttributedStringBuilder
     func build() -> NSAttributedString {
-        AttributedString("Test Builder\n kiarash vosough") {
-            StringKeyValueAttribute.foregroundColor(with: .red)
+        CocoString("Test Builder\n kiarash vosough") { str in
+            CocoAttribute.foregroundColor(.red)
+                .on(str.startIndex..<str.firstIndex(of: "r")!)
+            
+            TextAttachment {
+                CocoAttachment.bounds(.infinite)
+            }
             
             ParagrapghStyle {
-                StringParagraphStyle.lineHeightMultiple(8)
-                StringParagraphStyle.lineSpacing(2.3)
+                CocoParagraphStyle.lineHeightMultiple(8)
+                CocoParagraphStyle.lineSpacing(2.3)
             }
             
             Shadow {
-                StringShadow.shadowOffset(.init(width: 1, height: 1))
-                StringShadow.shadowColor(UIColor.black)
+                CocoShadow.shadowOffset(.init(width: 1.5, height: 1))
+                CocoShadow.shadowColor(UIColor.black)
             }
         }
     }

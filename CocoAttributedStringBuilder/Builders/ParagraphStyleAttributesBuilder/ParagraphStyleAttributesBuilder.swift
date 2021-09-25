@@ -27,13 +27,14 @@
 
 import UIKit
 
-public enum StringParagraphStyle: SpecificAppliableAttributes {
+public enum CocoParagraphStyle: SpecificAppliableAttributes {
     
     case baseWritingDirection(NSWritingDirection)
     case textAlignment(NSTextAlignment)
     case lineSpacing(CGFloat)
     case lineHeightMultiple(CGFloat)
     case lineBreakMode(NSLineBreakMode)
+
     
     func apply(on object: NSMutableParagraphStyle) {
         switch self {
@@ -51,23 +52,24 @@ public enum StringParagraphStyle: SpecificAppliableAttributes {
     }
 }
 
-public struct ParagrapghStyle: NSAttributedStringKeyValueConvertible {
+public final class ParagrapghStyle: AttributeKeyValueConvertible {
     
-    @AttributedStringParagraphStyleBuilder internal var builder: StringKeyValueAttribute.BuilderBlock
+    public var attribute: CocoStringAttributeHolder
     
-    public init(@AttributedStringParagraphStyleBuilder _ builder: @escaping StringKeyValueAttribute.BuilderBlock) {
-        self.builder = builder
+    public init(@ParagraphStyleBuilder _ builder: BuilderBlock) {
+        self.attribute = builder()
     }
     
-    public func asKeyValue() -> KeyValue {
-        builder().asKeyValue()
+    public func on(_ range: Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
     }
 }
 
 @resultBuilder
-public struct AttributedStringParagraphStyleBuilder {
+public struct ParagraphStyleBuilder {
     
-    public static func buildBlock(_ components: StringParagraphStyle...) -> StringKeyValueAttribute {
-        .init(key: .paragraphStyle, value: NSMutableParagraphStyle(with: components))
+    public static func buildBlock(_ components: CocoParagraphStyle...) -> CocoStringAttributeHolder {
+        .attribute(key: .paragraphStyle, value: NSMutableParagraphStyle(with: components))
     }
 }

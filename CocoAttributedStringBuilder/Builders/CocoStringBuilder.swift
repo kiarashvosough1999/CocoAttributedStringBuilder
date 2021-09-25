@@ -27,17 +27,29 @@
 
 import UIKit
 
-public protocol NSAttributedStringKeyValueConvertible {
+public struct CocoString {
     
-    typealias KeyValue = (key:NSAttributedString.Key,value: Any)
+    public typealias BuilderBlock = (String) -> [CocoStringAttributeHolder]
     
-    func asKeyValue() -> KeyValue
+    internal let string: String
+    
+    @CocoStringBuilder internal let attributes: BuilderBlock
+    
+    public init(_ string: String,
+                @CocoStringBuilder _ attributes: @escaping BuilderBlock) {
+        self.string = string
+        self.attributes = attributes
+    }
+    
+    public func toNSAttributedString() -> NSAttributedString {
+        return NSMutableAttributedString(string: string, with: attributes(string))
+    }
 }
 
 @resultBuilder
-public struct StringAttributeBuilder {
+public struct CocoStringBuilder {
     
-    public static func buildBlock(_ components: NSAttributedStringKeyValueConvertible...) -> [NSAttributedString.Key : Any] {
-        components.reduce(into: [NSAttributedString.Key : Any]()) { $0[$1.asKeyValue().key] = $1.asKeyValue().value }
+    public static func buildBlock(_ components: AttributeKeyValueConvertible...) -> [CocoStringAttributeHolder] {
+        components.map { $0.attribute }
     }
 }

@@ -1,8 +1,8 @@
 //
-//  AttributedStringBuilder.swift
+//  NSMutableParagraphStyle++Extension.swift
 //  CocoAttributedStringBuilder
 //
-//  Created by Kiarash Vosough on 7/1/1400 AP.
+//  Created by Kiarash Vosough on 7/2/1400 AP.
 //
 //  Copyright 2020 KiarashVosough and other contributors
 //
@@ -27,36 +27,9 @@
 
 import UIKit
 
-internal protocol SpecificAppliableAttributes {
-    associatedtype T: AnyObject
-    func apply(on object: T)
-}
-
-
-@resultBuilder
-public struct AttributedStringBuilder {
-    
-    public static func buildBlock(_ components: AttributedString...) -> NSAttributedString {
-        let attributedString = NSMutableAttributedString()
-        components.forEach { attributedString.append($0.toNSAttributedString()) }
-        return attributedString
-    }
-}
-
-
-public struct AttributedString {
-    
-    internal let string: String
-    
-    @StringAttributeBuilder internal var attributes: () -> [NSAttributedString.Key : Any]
-    
-    public init(_ string: String,
-                @StringAttributeBuilder _ attributes: @escaping () -> [NSAttributedString.Key : Any]) {
-        self.string = string
-        self.attributes = attributes
-    }
-    
-    public func toNSAttributedString() -> NSAttributedString {
-        return NSAttributedString(string: string, attributes: attributes())
+extension NSMutableParagraphStyle {
+    convenience init(with shadows: [CocoParagraphStyle]) {
+        self.init()
+        shadows.forEach { $0.apply(on: self) }
     }
 }

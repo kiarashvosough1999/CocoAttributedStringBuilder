@@ -27,7 +27,7 @@
 
 import UIKit
 
-public enum StringShadow: SpecificAppliableAttributes {
+public enum CocoShadow: SpecificAppliableAttributes {
     
     case shadowOffset(CGSize)
     case shadowBlurRadius(CGFloat)
@@ -45,23 +45,24 @@ public enum StringShadow: SpecificAppliableAttributes {
     }
 }
 
-public struct Shadow: NSAttributedStringKeyValueConvertible {
+public final class Shadow: AttributeKeyValueConvertible {
     
-    @AttributedStringShadowBuilder internal var builder: StringKeyValueAttribute.BuilderBlock
+    public var attribute: CocoStringAttributeHolder
     
-    public init(@AttributedStringShadowBuilder _ builder: @escaping StringKeyValueAttribute.BuilderBlock) {
-        self.builder = builder
+    public init(@ShadowBuilder _ builder: BuilderBlock) {
+        self.attribute = builder()
     }
     
-    public func asKeyValue() -> KeyValue {
-        builder().asKeyValue()
+    public func on(_ range: Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
     }
 }
 
 @resultBuilder
-public struct AttributedStringShadowBuilder {
+public struct ShadowBuilder {
     
-    public static func buildBlock(_ components: StringShadow...) -> StringKeyValueAttribute {
-        .init(key: .shadow, value: NSShadow(with: components))
+    public static func buildBlock(_ components: CocoShadow...) -> CocoStringAttributeHolder {
+        .attribute(key: .shadow, value: NSShadow(with: components))
     }
 }
