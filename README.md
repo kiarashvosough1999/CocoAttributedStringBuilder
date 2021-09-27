@@ -38,6 +38,24 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 pod 'CocoAttributedStringBuilder'
 ```
 
+## Sample Projects
+
+I have provided one sample projects in the repository. To use it download the repo, Source files for these are in the `CocoAttributedStringBuilderExamples` directory in project navigator. Have fun!
+
+## Usage
+
+Using Coco is so easy, It is inspired by SwiftUI and the very useful PropertyWrapper `@resultBuilder` in swift.
+
+You just need to annotate the functions or properties which return `NSAttributedString` to use Coco provided builders.
+
+```swift
+// swift-tools-version:5.3
+import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+func build() -> NSAttributedString { }
+```
+
 ## License
 
 CocoAttributedStringBuilder is released under the MIT license.
