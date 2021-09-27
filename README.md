@@ -102,20 +102,23 @@ func build() -> NSAttributedString {
         TextAttachment {
             CocoAttachment.bounds(.infinite)
         }
-
+        .on(str.startIndex..<str.firstIndex(of: "r")!)
+        
         ParagrapghStyle {
             CocoParagraphStyle.lineHeightMultiple(8)
             CocoParagraphStyle.lineSpacing(2.3)
         }
+        .on(str.startIndex..<str.firstIndex(of: "t")!)
 
         Shadow {
             CocoShadow.shadowOffset(.init(width: 1.5, height: 1))
             CocoShadow.shadowColor(UIColor.black)
         }
+        .on(str.startIndex..<str.firstIndex(of: "d")!)
     }
 }
 ```
 
 ## License
 
-CocoAttributedStringBuilder is released under the MIT license.
+CocoAttributedStringBuilder is released under an MIT license. See [License.md](https://github.com/CocoAttributedStringBuilder/CocoAttributedStringBuilder/blob/master/License.md) for more information.
