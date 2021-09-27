@@ -31,7 +31,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 
 ### CocoaPods
 
-[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate CocoAttributedStringBuilder into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'CocoAttributedStringBuilder'
@@ -39,4 +39,4 @@ pod 'CocoAttributedStringBuilder'
 
 ## License
 
-CocoAttributedStringBuilder is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
+CocoAttributedStringBuilder is released under the MIT license.
