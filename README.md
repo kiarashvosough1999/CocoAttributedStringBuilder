@@ -11,7 +11,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [SampleProjects](#Sample Projects)
+- [SampleProjects](#SampleProjects)
 - [Usage](#Usage)
 - [License](#license)
 
