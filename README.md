@@ -23,6 +23,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [x] Support NSParagraphStyle Attributes
 - [x] Specify range for each attribute
 - [ ] Support if-statement on builders
+- [ ] Provide operator to define an attribute
 
 ## Requirements
 
@@ -61,7 +62,7 @@ func build() -> NSAttributedString { }
 
 In order to create an AttributedString on Coco, you should use `CocoString` which takes a `String` and a builderBlock arguments.
 
-String which was provided in input argument is also available on the builderBlock.
+> String which was provided as an input argument is also available on the builderBlock to avoid outer variable or self capturing.
 
 ```swift
 import CocoAttributedStringBuilder
@@ -77,11 +78,43 @@ func build() -> NSAttributedString {
 
 ## Attributes
 
-| Builders           | Description |
-| :-------------:    |:-------------|
-| TextAttachment     | Provide a builder block for CocoAttachment which is a interface for `NSTextAttachment` |
-| ParagrapghStyle    | Provide a builder block for CocoParagraphStyle which is a interface for `NSParagraphStyle` |
-| CocoShadow         | Provide a builder block for CocoShadow which is a interface for `NSShadow` |
+Coco supports four kind of Attributes.
+
+> Each attribute is normally added to whole string, unless you specify the range of string you demand.
+>> Coco is not responsible for handling invalid ranges, so be more careful on specifying the ranges.
+
+| Builders            | Description |
+| :-------------:     |:-------------|
+| `CocoAttribute`     | Provide a keyValue interface for `NSAttributedString.Key` |
+| `TextAttachment`    | Provide a builder block for `CocoAttachment` which is an interface for `NSTextAttachment` |
+| `ParagrapghStyle`   | Provide a builder block for `CocoParagraphStyle` which is an interface for `NSParagraphStyle` |
+| `CocoShadow`        | Provide a builder block for `CocoShadow which` is an interface for `NSShadow` |
+
+```swift
+import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+func build() -> NSAttributedString {
+    CocoString("Test Builder") { str in
+        CocoAttribute.foregroundColor(.red)
+            .on(str.startIndex..<str.firstIndex(of: "r")!)
+
+        TextAttachment {
+            CocoAttachment.bounds(.infinite)
+        }
+
+        ParagrapghStyle {
+            CocoParagraphStyle.lineHeightMultiple(8)
+            CocoParagraphStyle.lineSpacing(2.3)
+        }
+
+        Shadow {
+            CocoShadow.shadowOffset(.init(width: 1.5, height: 1))
+            CocoShadow.shadowColor(UIColor.black)
+        }
+    }
+}
+```
 
 ## License
 
