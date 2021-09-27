@@ -11,6 +11,8 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [SampleProjects](#Sample Projects)
+- [Usage](#Usage)
 - [License](#license)
 
 ## Features
@@ -55,7 +57,7 @@ import CocoAttributedStringBuilder
 func build() -> NSAttributedString { }
 ```
 
-###Create Your First CocoAttributedString
+### Create Your First CocoAttributedString
 
 In order to create an AttributedString on Coco, you should use `CocoString` which takes a `String` and a builderBlock arguments.
 
