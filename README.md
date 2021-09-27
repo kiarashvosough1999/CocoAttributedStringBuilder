@@ -121,4 +121,4 @@ func build() -> NSAttributedString {
 
 ## License
 
-CocoAttributedStringBuilder is released under an MIT license. See [License.md](https://github.com/CocoAttributedStringBuilder/CocoAttributedStringBuilder/blob/master/LICENSE) for more information.
+CocoAttributedStringBuilder is released under an MIT license. See [LICENSE](https://github.com/CocoAttributedStringBuilder/blob/master/LICENSE) for more information.
