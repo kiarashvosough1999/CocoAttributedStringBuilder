@@ -95,7 +95,7 @@ Coco supports four kind of Attributes.
 >> Coco is not responsible for handling invalid ranges, so be more careful on specifying the ranges.
 
 | Builders            | Description |
-| :-------------:     |:-------------|
+| :-------------      |:-------------|
 | `CocoAttribute`     | Provide a keyValue interface for `NSAttributedString.Key` |
 | `TextAttachment`    | Provide a builder block for `CocoAttachment` which is an interface for `NSTextAttachment` |
 | `ParagrapghStyle`   | Provide a builder block for `CocoParagraphStyle` which is an interface for `NSParagraphStyle` |
