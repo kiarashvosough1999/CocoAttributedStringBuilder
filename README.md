@@ -56,6 +56,9 @@ You just need to annotate the functions or properties which return `NSAttributed
 import CocoAttributedStringBuilder
 
 @CocoAttributedStringBuilder
+var builder: NSAttributedString { }
+
+@CocoAttributedStringBuilder
 func build() -> NSAttributedString { }
 ```
 
@@ -67,6 +70,13 @@ In order to create an AttributedString on Coco, you should use `CocoString` whic
 
 ```swift
 import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+var builder: NSAttributedString {
+    CocoString("Test Builder") { str in 
+      // attributes comes here
+    }
+}
 
 @CocoAttributedStringBuilder
 func build() -> NSAttributedString {
