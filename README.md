@@ -20,6 +20,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [x] Support NSTextAttachment Attributes
 - [x] Support NSParagraphStyle Attributes
 - [x] Specify range for each attribute
+- [ ] Support if-statement on builders
 
 ## Requirements
 
