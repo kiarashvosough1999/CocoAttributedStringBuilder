@@ -11,7 +11,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [SampleProjects](#Sample_Projects)
+- [SampleProjects](#Sample)
 - [Usage](#Usage)
 - [License](#license)
 
@@ -41,7 +41,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 pod 'CocoAttributedStringBuilder'
 ```
 
-## Sample Projects
+## Sample
 
 I have provided one sample project in the repository. To use it clone the repo, Source files for these are in the `CocoAttributedStringBuilderExamples` directory in project navigator. Have fun!
 
