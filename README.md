@@ -40,7 +40,7 @@ pod 'CocoAttributedStringBuilder'
 
 ## Sample Projects
 
-I have provided one sample projects in the repository. To use it download the repo, Source files for these are in the `CocoAttributedStringBuilderExamples` directory in project navigator. Have fun!
+I have provided one sample project in the repository. To use it clone the repo, Source files for these are in the `CocoAttributedStringBuilderExamples` directory in project navigator. Have fun!
 
 ## Usage
 
@@ -49,12 +49,37 @@ Using Coco is so easy, It is inspired by SwiftUI and the very useful PropertyWra
 You just need to annotate the functions or properties which return `NSAttributedString` to use Coco provided builders.
 
 ```swift
-// swift-tools-version:5.3
 import CocoAttributedStringBuilder
 
 @CocoAttributedStringBuilder
 func build() -> NSAttributedString { }
 ```
+
+###Create Your First CocoAttributedString
+
+In order to create an AttributedString on Coco, you should use `CocoString` which takes a `String` and a builderBlock arguments.
+
+String which was provided in input argument is also available on the builderBlock.
+
+```swift
+import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+func build() -> NSAttributedString {
+    CocoString("Test Builder") { str in 
+      // attributes comes here
+    }
+}
+```
+
+
+## Attributes
+
+| Builders           | Description |
+| :-------------:    |:-------------|
+| TextAttachment     | Provide a builder block for CocoAttachment which is a interface for `NSTextAttachment` |
+| ParagrapghStyle    | Provide a builder block for CocoParagraphStyle which is a interface for `NSParagraphStyle` |
+| CocoShadow         | Provide a builder block for CocoShadow which is a interface for `NSShadow` |
 
 ## License
 
