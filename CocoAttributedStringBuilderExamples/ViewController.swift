@@ -72,6 +72,12 @@ final class ViewController: UIViewController {
             ParagrapghStyle {
                 CocoParagraphStyle.lineHeightMultiple(8)
                 CocoParagraphStyle.lineSpacing(2.3)
+                
+                TextTab {
+                    CocoTextTab.tab(textAlignment: .center, location: 5)
+                    CocoTextTab.tab(textAlignment: .center, location: 5)
+                }
+                
             }
             
             Shadow {

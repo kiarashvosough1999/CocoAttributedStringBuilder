@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE689BE527050178002B143E /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */; };
 		DE6B467326FD0A930038F720 /* CocoAttributedStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */; };
 		DE6B467826FD0A930038F720 /* CocoAttributedStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B467726FD0A930038F720 /* CocoAttributedStringBuilderTests.swift */; };
 		DE6B467A26FD0A930038F720 /* CocoAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6B466C26FD0A930038F720 /* CocoAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTabAttributesBuilder.swift; sourceTree = "<group>"; };
 		DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoAttributedStringBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6B466C26FD0A930038F720 /* CocoAttributedStringBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoAttributedStringBuilder.h; sourceTree = "<group>"; };
 		DE6B466D26FD0A930038F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		DE689BE32705015F002B143E /* TextTabAttributesBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */,
+			);
+			path = TextTabAttributesBuilder;
+			sourceTree = "<group>";
+		};
 		DE6B465F26FD0A930038F720 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +226,7 @@
 		DE6B46A126FD0E1A0038F720 /* ParagraphStyleAttributesBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				DE689BE32705015F002B143E /* TextTabAttributesBuilder */,
 				DE6B46A226FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift */,
 				DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */,
 			);
@@ -401,6 +412,7 @@
 				DE6B46B826FD4DD00038F720 /* CocoStringAttributeHolder.swift in Sources */,
 				DE6B46C126FD4EF10038F720 /* Helpers.swift in Sources */,
 				DE6B46A926FD0E650038F720 /* ShadowAttributesBuilder.swift in Sources */,
+				DE689BE527050178002B143E /* TextTabAttributesBuilder.swift in Sources */,
 				DE6B46B226FD264B0038F720 /* NSTextAttachment++Extension.swift in Sources */,
 				DE6B46C326FD55C30038F720 /* NSMutableAttributedString++Extension.swift in Sources */,
 				DE6B469E26FD0DE90038F720 /* CocoAttributedStringBuilder.swift in Sources */,
