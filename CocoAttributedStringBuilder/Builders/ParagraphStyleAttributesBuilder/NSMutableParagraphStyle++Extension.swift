@@ -28,7 +28,7 @@
 import UIKit
 
 extension NSMutableParagraphStyle {
-    convenience init(with shadows: [CocoParagraphStyle]) {
+    convenience init(with shadows: [CocoParagraphStyleConvertible]) {
         self.init()
         shadows.forEach { $0.apply(on: self) }
     }

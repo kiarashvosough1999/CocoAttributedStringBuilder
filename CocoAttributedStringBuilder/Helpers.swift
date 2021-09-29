@@ -25,6 +25,16 @@
 //  OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-import Foundation
+import UIKit
 
 public typealias BuilderBlock = () -> CocoStringAttributeHolder
+public typealias TabBuilderBlock = () -> [CocoTextTab]
+
+protocol NSConvertible {
+    associatedtype T: AnyObject
+    func toNS() -> T
+}
+
+public protocol CocoParagraphStyleConvertible {
+    func apply(on object: NSMutableParagraphStyle)
+}
