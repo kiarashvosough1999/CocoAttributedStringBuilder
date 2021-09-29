@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CocoAttributedStringBuilder"
-  spec.version      = "0.1.0"
+  spec.version      = "0.2.0"
   spec.summary      = "Pure swift library to build NSAttributedString"
 
 
@@ -45,7 +45,7 @@ Pod::Spec.new do |spec|
   spec.source_files  =  "CocoAttributedStringBuilder/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
   
-  spec.swift_version = "5.1"
+  spec.swift_versions = ['5.3', '5.4' , '5.5']
   spec.framework = "UIKit"
 
   # spec.public_header_files = "Classes/**/*.h"
