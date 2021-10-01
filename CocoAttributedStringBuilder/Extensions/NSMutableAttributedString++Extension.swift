@@ -31,7 +31,7 @@ extension NSMutableAttributedString {
     
     convenience init(by appending: [CocoString]) {
         self.init()
-        appending.forEach { append($0.toNSAttributedString()) }
+        appending.forEach { append($0.attributedString) }
     }
     
     convenience init(string: String, with attributes: [CocoStringAttributeHolder]) {

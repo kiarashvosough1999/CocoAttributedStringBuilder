@@ -27,8 +27,21 @@
 
 import UIKit
 
+public typealias StringBuilderBlock = (String) -> [CocoStringAttributeHolder]
+
+public typealias AttributeBuilderBlock = (String, CocoAttribute.Type) -> [CocoStringAttributeHolder]
+
 public typealias BuilderBlock = () -> CocoStringAttributeHolder
-public typealias TabBuilderBlock = () -> [CocoTextTab]
+
+public typealias ParagraphStyleBuilderBlock = (CocoParagraphStyle.Type) -> CocoStringAttributeHolder
+
+public typealias AttachmentBuilderBlock = (CocoAttachment.Type) -> CocoStringAttributeHolder
+
+public typealias ShadowBuilderBlock = (CocoShadow.Type) -> CocoStringAttributeHolder
+
+public typealias TabBuilderBlock = () -> [NSTextTab]
+
+public typealias TextTabBuilderBlock = (CocoTextTab.Type) -> [NSTextTab]
 
 protocol NSConvertible {
     associatedtype T: AnyObject

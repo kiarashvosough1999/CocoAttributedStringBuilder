@@ -29,20 +29,16 @@ import UIKit
 
 public struct CocoString {
     
-    public typealias BuilderBlock = (String) -> [CocoStringAttributeHolder]
-    
-    internal let string: String
-    
-    @CocoStringBuilder internal let attributes: BuilderBlock
+    internal let attributedString: NSAttributedString
     
     public init(_ string: String,
-                @CocoStringBuilder _ attributes: @escaping BuilderBlock) {
-        self.string = string
-        self.attributes = attributes
+                @CocoStringBuilder _ attributes: @escaping StringBuilderBlock) {
+        self.attributedString = NSMutableAttributedString(string: string, with: attributes(string))
     }
     
-    public func toNSAttributedString() -> NSAttributedString {
-        return NSMutableAttributedString(string: string, with: attributes(string))
+    public init(_ string: String,
+                @CocoStringBuilder _ attributes: @escaping AttributeBuilderBlock) {
+        self.attributedString = NSMutableAttributedString(string: string, with: attributes(string, CocoAttribute.self))
     }
 }
 
