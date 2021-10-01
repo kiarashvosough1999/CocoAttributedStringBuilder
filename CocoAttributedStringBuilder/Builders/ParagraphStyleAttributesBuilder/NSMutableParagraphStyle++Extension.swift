@@ -27,9 +27,40 @@
 
 import UIKit
 
-extension NSMutableParagraphStyle {
-    convenience init(with shadows: [CocoParagraphStyleConvertible]) {
-        self.init()
-        shadows.forEach { $0.apply(on: self) }
+internal final class ParagraphStyleAdapter: NSMutableParagraphStyle {
+    
+    /// On this special adapter we are not going to save the adaptee as we map them to super class's properties
+    internal init(adaptee: [CocoParagraphStyle]) {
+        super.init()
+        setNeedsAttributes(adaptee: adaptee)
+    }
+    
+    internal required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    private func setNeedsAttributes(adaptee: [CocoParagraphStyle]) {
+        adaptee.forEach {
+            switch $0 {
+            case let .baseWritingDirection(value): baseWritingDirection = value
+            case let .textAlignment(value): alignment = value
+            case let .lineSpacing(value): lineSpacing = value
+            case let .lineHeightMultiple(value): lineHeightMultiple = value
+            case let .lineBreakMode(value): lineBreakMode = value
+            case let .paragraphSpacing(value): paragraphSpacing = value
+            case let .firstLineHeadIndent(value): firstLineHeadIndent = value
+            case let .headIndent(value): headIndent = value
+            case let .tailIndent(value): tailIndent = value
+            case let .minimumLineHeight(value): minimumLineHeight = value
+            case let .maximumLineHeight(value): maximumLineHeight = value
+            case let .paragraphSpacingBefore(value): paragraphSpacingBefore = value
+            case let .hyphenationFactor(value): hyphenationFactor = value
+            case let .tabStops(value): tabStops = value
+            case let .defaultTabInterval(value): defaultTabInterval = value
+            case let .allowsDefaultTighteningForTruncation(value): allowsDefaultTighteningForTruncation = value
+            case let .lineBreakStrategy(value): lineBreakStrategy = value
+            case let .defaultWritingDirection(languageName): baseWritingDirection = NSParagraphStyle.defaultWritingDirection(forLanguage: languageName)
+            }
+        }
     }
 }
