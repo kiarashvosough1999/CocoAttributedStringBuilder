@@ -27,9 +27,8 @@
 
 import Foundation
 
-public protocol AttributeKeyValueConvertible {
+public protocol AttributeKeyValueConvertible: AnyObject {
     
     var attribute: CocoStringAttributeHolder { get }
     
-    func on(_ range: Range<String.Index>) -> Self
 }
