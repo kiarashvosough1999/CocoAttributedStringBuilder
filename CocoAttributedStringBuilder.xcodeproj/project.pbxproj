@@ -30,10 +30,10 @@
 		DE6B46B626FD27270038F720 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */; };
 		DE6B46B826FD4DD00038F720 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B726FD4DD00038F720 /* CocoStringAttributeHolder.swift */; };
 		DE6B46BB26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */; };
-		DE6B46BD26FD4E1D0038F720 /* SpecificAppliableAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46BC26FD4E1D0038F720 /* SpecificAppliableAttributes.swift */; };
 		DE6B46BF26FD4E6D0038F720 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46BE26FD4E6D0038F720 /* String++Extension.swift */; };
 		DE6B46C126FD4EF10038F720 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46C026FD4EF10038F720 /* Helpers.swift */; };
 		DE6B46C326FD55C30038F720 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46C226FD55C30038F720 /* NSMutableAttributedString++Extension.swift */; };
+		DEC7F1BC27074E4D00CE5EF6 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,10 +94,10 @@
 		DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle++Extension.swift"; sourceTree = "<group>"; };
 		DE6B46B726FD4DD00038F720 /* CocoStringAttributeHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoStringAttributeHolder.swift; sourceTree = "<group>"; };
 		DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeKeyValueConvertible.swift; sourceTree = "<group>"; };
-		DE6B46BC26FD4E1D0038F720 /* SpecificAppliableAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificAppliableAttributes.swift; sourceTree = "<group>"; };
 		DE6B46BE26FD4E6D0038F720 /* String++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++Extension.swift"; sourceTree = "<group>"; };
 		DE6B46C026FD4EF10038F720 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DE6B46C226FD55C30038F720 /* NSMutableAttributedString++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString++Extension.swift"; sourceTree = "<group>"; };
+		DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeRangeProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */,
-				DE6B46BC26FD4E1D0038F720 /* SpecificAppliableAttributes.swift */,
+				DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -412,12 +412,12 @@
 				DE6B46B826FD4DD00038F720 /* CocoStringAttributeHolder.swift in Sources */,
 				DE6B46C126FD4EF10038F720 /* Helpers.swift in Sources */,
 				DE6B46A926FD0E650038F720 /* ShadowAttributesBuilder.swift in Sources */,
+				DEC7F1BC27074E4D00CE5EF6 /* AttributeRangeProvider.swift in Sources */,
 				DE689BE527050178002B143E /* TextTabAttributesBuilder.swift in Sources */,
 				DE6B46B226FD264B0038F720 /* NSTextAttachment++Extension.swift in Sources */,
 				DE6B46C326FD55C30038F720 /* NSMutableAttributedString++Extension.swift in Sources */,
 				DE6B469E26FD0DE90038F720 /* CocoAttributedStringBuilder.swift in Sources */,
 				DE6B46A326FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift in Sources */,
-				DE6B46BD26FD4E1D0038F720 /* SpecificAppliableAttributes.swift in Sources */,
 				DE6B46A026FD0DE90038F720 /* CocoAttribute.swift in Sources */,
 				DE6B469F26FD0DE90038F720 /* CocoStringBuilder.swift in Sources */,
 				DE6B46B426FD26CB0038F720 /* NSShadow++Extension.swift in Sources */,
