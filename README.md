@@ -145,7 +145,7 @@ import CocoAttributedStringBuilder
 
 @CocoAttributedStringBuilder
 func build() -> NSAttributedString {
-CocoString("Test 2 Builder\n kiarash vosough") { str, a in
+CocoString("Test Builder") { str, a in
     a.foregroundColor(.red)
         .within(str.startIndex..<str.firstIndex(of: "r")!)
 
@@ -167,7 +167,7 @@ import CocoAttributedStringBuilder
 
 @CocoAttributedStringBuilder
 func build() -> NSAttributedString {
-CocoString("Test 2 Builder\n kiarash vosough") { str, a in
+CocoString("Test Builder") { str, a in
 
     TextAttachment { t in
         CGRect.infinite
