@@ -150,7 +150,6 @@ CocoString("Test 2 Builder\n kiarash vosough") { str, a in
         .within(str.startIndex..<str.firstIndex(of: "r")!)
 
     TextAttachment { t in
-        CGRect.infinite
         t.bounds(.infinite)
     }
 }
