@@ -22,6 +22,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [x] Support NSShadow Attributes
 - [x] Support NSTextAttachment Attributes
 - [x] Support NSParagraphStyle Attributes
+- [x] Support NSParagraphStyle's NextTabs
 - [x] Specify range for each attribute
 - [ ] Support if-statement on builders
 - [ ] Provide operator to define an attribute
@@ -99,6 +100,7 @@ Coco supports four kind of Attributes.
 | `CocoAttribute`     | Provide a keyValue interface for `NSAttributedString.Key` |
 | `TextAttachment`    | Provide a builder block for `CocoAttachment` which is an interface for `NSTextAttachment` |
 | `ParagrapghStyle`   | Provide a builder block for `CocoParagraphStyle` which is an interface for `NSParagraphStyle` |
+| `TextTab`           | Provide a builder block for `CocoTextTab` which is an interface for `NSTextTab` |
 | `CocoShadow`        | Provide a builder block for `CocoShadow which` is an interface for `NSShadow` |
 
 ```swift
@@ -118,6 +120,10 @@ func build() -> NSAttributedString {
         ParagrapghStyle {
             CocoParagraphStyle.lineHeightMultiple(8)
             CocoParagraphStyle.lineSpacing(2.3)
+            TextTab {
+                CocoTextTab.tab(textAlignment: .center, location: 5)
+                CocoTextTab.tab(textAlignment: .center, location: 5)
+            }
         }
         .on(str.startIndex..<str.firstIndex(of: "t")!)
 
