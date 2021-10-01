@@ -27,9 +27,28 @@
 
 import UIKit
 
-extension NSShadow {
-    convenience init(with shadows: [CocoShadow]) {
-        self.init()
-        shadows.forEach { $0.apply(on: self) }
+internal final class ShadowAdapter: NSShadow {
+    
+    /// On this special adapter we are not going to save the adaptee as we map them to super class's properties
+    internal init(adaptee: [CocoShadow]) {
+        super.init()
+        setNeedsAttributes(adaptee: adaptee)
+    }
+    
+    internal required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    private func setNeedsAttributes(adaptee: [CocoShadow]) {
+        adaptee.forEach {
+            switch $0 {
+            case let .shadowOffset(size):
+                shadowOffset = size
+            case let .shadowBlurRadius(value):
+                shadowBlurRadius = value
+            case let .shadowColor(color):
+                shadowColor = color
+            }
+        }
     }
 }
