@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CocoAttributedStringBuilder"
-  spec.version      = "0.2.0"
+  spec.version      = "0.3.0"
   spec.summary      = "Pure swift library to build NSAttributedString"
 
 
