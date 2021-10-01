@@ -115,26 +115,65 @@ func build() -> NSAttributedString {
         TextAttachment {
             CocoAttachment.bounds(.infinite)
         }
-        .on(str.startIndex..<str.firstIndex(of: "r")!)
+        .within(str.startIndex..<str.firstIndex(of: "r")!)
         
         ParagrapghStyle {
             CocoParagraphStyle.lineHeightMultiple(8)
             CocoParagraphStyle.lineSpacing(2.3)
             TextTab {
-                CocoTextTab.tab(textAlignment: .center, location: 5)
+                CocoTextTab.tab(textAlignment: .left, location: 5)
                 CocoTextTab.tab(textAlignment: .center, location: 5)
             }
         }
-        .on(str.startIndex..<str.firstIndex(of: "t")!)
+        .within { str.startIndex..<str.firstIndex(of: "h")! }
 
         Shadow {
             CocoShadow.shadowOffset(.init(width: 1.5, height: 1))
             CocoShadow.shadowColor(UIColor.black)
         }
-        .on(str.startIndex..<str.firstIndex(of: "d")!)
+        .within(str.startIndex..<str.firstIndex(of: "d")!)
     }
 }
 ```
+
+#### Using Meta-Type
+
+Instead of Using Each `Coco` Enums to use its Attributes, you can use BuilderBlock with meta-type of `Coco` Enum provided for that Block.
+
+```swift
+import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+func build() -> NSAttributedString {
+CocoString("Test 2 Builder\n kiarash vosough") { str, a in
+    a.foregroundColor(.red)
+        .within(str.startIndex..<str.firstIndex(of: "r")!)
+
+    TextAttachment { t in
+        CGRect.infinite
+        t.bounds(.infinite)
+    }
+}
+```
+
+#### Use Concrete Types
+
+I recommend you to use either meta-type provides block or `Coco` Enums, but there is another way with one special condition.
+you can use each attribute Concrete type directly in each block if and only if that type is unique on that Enum.
+
+> On this example Bounds input argument is Unique in `CocoCocoAttachment`, so we can use its input concrete type to add as attribute,
+> `CGRect` which is defined is consided as `b.bounds(.infinite)`
+```swift
+import CocoAttributedStringBuilder
+
+@CocoAttributedStringBuilder
+func build() -> NSAttributedString {
+CocoString("Test 2 Builder\n kiarash vosough") { str, a in
+
+    TextAttachment { t in
+        CGRect.infinite
+    }
+}
 
 ## Contributors
 
