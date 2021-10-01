@@ -27,9 +27,32 @@
 
 import UIKit
 
-extension NSTextAttachment {
-    convenience init(with attachments: [CocoAttachment]) {
-        self.init()
-        attachments.forEach { $0.apply(on: self) }
+internal final class AttachmentAdapter: NSTextAttachment {
+    
+    /// On this special adapter we are not going to save the adaptee as we map them to super class's properties
+    internal init(adaptee: [CocoAttachment]) {
+        super.init(data: nil, ofType: nil)
+        setNeedsAttributes(adaptee: adaptee)
+    }
+    
+    internal required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    private func setNeedsAttributes(adaptee: [CocoAttachment]) {
+        adaptee.forEach {
+            switch $0 {
+                case let .content(data):
+                    contents = data
+                case let .fileType(stringLiteral):
+                    fileType = stringLiteral
+                case let .bounds(rect):
+                    bounds = rect
+                case let .image(img):
+                    image = img
+                case let .fileWrapper(wrapper):
+                    fileWrapper = wrapper
+            }
+        }
     }
 }
