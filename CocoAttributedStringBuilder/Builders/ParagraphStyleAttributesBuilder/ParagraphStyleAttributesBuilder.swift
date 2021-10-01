@@ -27,7 +27,7 @@
 
 import UIKit
 
-public enum CocoParagraphStyle: CocoParagraphStyleConvertible {
+public enum CocoParagraphStyle {
     
     case baseWritingDirection(NSWritingDirection)
     case textAlignment(NSTextAlignment)
@@ -55,32 +55,10 @@ public enum CocoParagraphStyle: CocoParagraphStyleConvertible {
 
     @available(iOS 9.0, *)
     case lineBreakStrategy(NSParagraphStyle.LineBreakStrategy)
-    
-    public func apply(on object: NSMutableParagraphStyle) {
-        switch self {
-        case let .baseWritingDirection(value): object.baseWritingDirection = value
-        case let .textAlignment(value): object.alignment = value
-        case let .lineSpacing(value): object.lineSpacing = value
-        case let .lineHeightMultiple(value): object.lineHeightMultiple = value
-        case let .lineBreakMode(value): object.lineBreakMode = value
-        case let .paragraphSpacing(value): object.paragraphSpacing = value
-        case let .firstLineHeadIndent(value): object.firstLineHeadIndent = value
-        case let .headIndent(value): object.headIndent = value
-        case let .tailIndent(value): object.tailIndent = value
-        case let .minimumLineHeight(value): object.minimumLineHeight = value
-        case let .maximumLineHeight(value): object.maximumLineHeight = value
-        case let .paragraphSpacingBefore(value): object.paragraphSpacingBefore = value
-        case let .hyphenationFactor(value): object.hyphenationFactor = value
-        case let .tabStops(value): object.tabStops = value
-        case let .defaultTabInterval(value): object.defaultTabInterval = value
-        case let .allowsDefaultTighteningForTruncation(value): object.allowsDefaultTighteningForTruncation = value
-        case let .lineBreakStrategy(value): object.lineBreakStrategy = value
-        case let .defaultWritingDirection(languageName): object.baseWritingDirection = NSParagraphStyle.defaultWritingDirection(forLanguage: languageName)
-        }
-    }
+
 }
 
-public final class ParagrapghStyle: AttributeKeyValueConvertible {
+public final class ParagrapghStyle: AttributeKeyValueConvertible, AttributeRangeProvider {
     
     public var attribute: CocoStringAttributeHolder
     
@@ -88,8 +66,17 @@ public final class ParagrapghStyle: AttributeKeyValueConvertible {
         self.attribute = builder()
     }
     
-    public func on(_ range: Range<String.Index>) -> Self {
+    public init(@ParagraphStyleBuilder _ builder: ParagraphStyleBuilderBlock) {
+        self.attribute = builder(CocoParagraphStyle.self)
+    }
+    
+    public func within(_ range: Range<String.Index>) -> Self {
         self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
+    }
+    
+    public func within(_ range: () -> Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
         return self
     }
 }
@@ -97,7 +84,36 @@ public final class ParagrapghStyle: AttributeKeyValueConvertible {
 @resultBuilder
 public struct ParagraphStyleBuilder {
     
-    public static func buildBlock(_ components: CocoParagraphStyleConvertible...) -> CocoStringAttributeHolder {
-        .attribute(key: .paragraphStyle, value: NSMutableParagraphStyle(with: components))
+    public static func buildExpression(_ expression: CocoParagraphStyle) -> CocoParagraphStyle {
+        expression
+    }
+    
+    public static func buildExpression(_ expression: NSWritingDirection) -> CocoParagraphStyle {
+        .baseWritingDirection(expression)
+    }
+    
+    public static func buildExpression(_ expression: NSTextAlignment) -> CocoParagraphStyle {
+        .textAlignment(expression)
+    }
+    
+    public static func buildExpression(_ expression: NSLineBreakMode) -> CocoParagraphStyle {
+        .lineBreakMode(expression)
+    }
+    
+    public static func buildExpression(_ expression: Float) -> CocoParagraphStyle {
+        .hyphenationFactor(expression)
+    }
+    
+    public static func buildExpression(_ expression: String) -> CocoParagraphStyle {
+        .defaultWritingDirection(languageName: expression)
+    }
+    
+    @available(iOS 9.0, *)
+    public static func buildExpression(_ expression: TextTab) -> CocoParagraphStyle {
+        .tabStops(expression.tabs)
+    }
+    
+    public static func buildBlock(_ components: CocoParagraphStyle...) -> CocoStringAttributeHolder {
+        .attribute(key: .paragraphStyle, value: ParagraphStyleAdapter(adaptee: components))
     }
 }
