@@ -27,34 +27,30 @@
 
 import UIKit
 
-public enum CocoShadow: SpecificAppliableAttributes {
-    
+public enum CocoShadow {
     case shadowOffset(CGSize)
     case shadowBlurRadius(CGFloat)
-    case shadowColor(Any?)
-    
-    func apply(on object: NSShadow) {
-        switch self {
-        case let .shadowOffset(size):
-            object.shadowOffset = size
-        case let .shadowBlurRadius(value):
-            object.shadowBlurRadius = value
-        case let .shadowColor(color):
-            object.shadowColor = color
-        }
-    }
+    case shadowColor(UIColor? = .black.withAlphaComponent(1/3))
 }
 
-public final class Shadow: AttributeKeyValueConvertible {
+public final class Shadow: AttributeKeyValueConvertible, AttributeRangeProvider {
     
     public var attribute: CocoStringAttributeHolder
     
     public init(@ShadowBuilder _ builder: BuilderBlock) {
         self.attribute = builder()
     }
+    public init(@ShadowBuilder _ builder: ShadowBuilderBlock) {
+        self.attribute = builder(CocoShadow.self)
+    }
     
-    public func on(_ range: Range<String.Index>) -> Self {
+    public func within(_ range: Range<String.Index>) -> Self {
         self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
+    }
+    
+    public func within(_ range: () -> Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
         return self
     }
 }
@@ -62,7 +58,23 @@ public final class Shadow: AttributeKeyValueConvertible {
 @resultBuilder
 public struct ShadowBuilder {
     
+    public static func buildExpression(_ expression: CocoShadow) -> CocoShadow {
+        expression
+    }
+    
+    public static func buildExpression(_ expression: CGSize) -> CocoShadow {
+        .shadowOffset(expression)
+    }
+    
+    public static func buildExpression(_ expression: CGFloat) -> CocoShadow {
+        .shadowBlurRadius(expression)
+    }
+    
+    public static func buildExpression(_ expression: UIColor) -> CocoShadow {
+        .shadowColor(expression)
+    }
+    
     public static func buildBlock(_ components: CocoShadow...) -> CocoStringAttributeHolder {
-        .attribute(key: .shadow, value: NSShadow(with: components))
+        .attribute(key: .shadow, value: ShadowAdapter(adaptee: components))
     }
 }
