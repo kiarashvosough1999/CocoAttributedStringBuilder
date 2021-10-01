@@ -28,35 +28,15 @@
 
 import UIKit
 
-public enum CocoAttachment: SpecificAppliableAttributes {
-    
-    case content(Data,String)
-    case contents(Data)
+public enum CocoAttachment {
+    case content(Data)
     case fileType(String)
     case bounds(CGRect)
     case image(UIImage)
     case fileWrapper(FileWrapper)
-    
-    internal func apply(on object: NSTextAttachment) {
-        switch self {
-            case let .content(data,stringLiteral):
-                object.contents = data
-                object.fileType = stringLiteral
-            case let .contents(data):
-                object.contents = data
-            case let .fileType(stringLiteral):
-                object.fileType = stringLiteral
-            case let .bounds(rect):
-                object.bounds = rect
-            case let .image(image):
-                object.image = image
-            case let .fileWrapper(wrapper):
-                object.fileWrapper = wrapper
-        }
-    }
 }
 
-public final class TextAttachment: AttributeKeyValueConvertible {
+public final class TextAttachment: AttributeKeyValueConvertible, AttributeRangeProvider {
     
     public var attribute: CocoStringAttributeHolder
     
@@ -64,8 +44,17 @@ public final class TextAttachment: AttributeKeyValueConvertible {
         self.attribute = builder()
     }
     
-    public func on(_ range: Range<String.Index>) -> Self {
+    public init(@TextAttachmentBuilder _ builder: AttachmentBuilderBlock) {
+        self.attribute = builder(CocoAttachment.self)
+    }
+    
+    public func within(_ range: Range<String.Index>) -> Self {
         self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
+        return self
+    }
+    
+    public func within(_ range: () -> Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
         return self
     }
 }
@@ -73,7 +62,28 @@ public final class TextAttachment: AttributeKeyValueConvertible {
 @resultBuilder
 public struct TextAttachmentBuilder {
     
+    public static func buildExpression(_ expression: CocoAttachment) -> CocoAttachment {
+        expression
+    }
+    
+    public static func buildExpression(_ expression: String) -> CocoAttachment {
+        .fileType(expression)
+    }
+    public static func buildExpression(_ expression: CGRect) -> CocoAttachment {
+        .bounds(expression)
+    }
+    public static func buildExpression(_ expression: UIImage) -> CocoAttachment {
+        .image(expression)
+    }
+    public static func buildExpression(_ expression: Data) -> CocoAttachment {
+        .content(expression)
+    }
+    public static func buildExpression(_ expression: FileWrapper) -> CocoAttachment {
+        .fileWrapper(expression)
+    }
+    
+    
     public static func buildBlock(_ components: CocoAttachment...) -> CocoStringAttributeHolder {
-        .attribute(key: .attachment, value: NSTextAttachment(with: components))
+        .attribute(key: .attachment, value: AttachmentAdapter(adaptee: components))
     }
 }
