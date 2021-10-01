@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 9.0, *)
 public struct CocoTextTab: NSConvertible {
     
     private let textAlignment: NSTextAlignment
@@ -32,24 +33,33 @@ extension CocoTextTab {
     
 }
 
-public final class TextTab: CocoParagraphStyleConvertible {
+@available(iOS 9.0, *)
+public final class TextTab {
 
-    public var tabs: [CocoTextTab]
+    public var tabs: [NSTextTab]
     
     public init(@TextTabAttributesBuilder _ builder: TabBuilderBlock) {
         self.tabs = builder()
     }
     
-    public func apply(on object: NSMutableParagraphStyle) {
-        tabs.forEach {object.addTabStop($0.toNS()) }
-        
+    public init(@TextTabAttributesBuilder _ builder: TextTabBuilderBlock) {
+        self.tabs = builder(CocoTextTab.self)
     }
 }
 
 @resultBuilder
+@available(iOS 9.0, *)
 public struct TextTabAttributesBuilder {
     
-    public static func buildBlock(_ components: CocoTextTab...) -> [CocoTextTab] {
-        components
+    public static func buildExpression(_ expression: NSTextTab) -> CocoTextTab {
+        .tab(textAlignment: expression.alignment, location: expression.location, options: expression.options)
+    }
+    
+    public static func buildExpression(_ expression: CocoTextTab) -> CocoTextTab {
+        expression
+    }
+    
+    public static func buildBlock(_ components: CocoTextTab...) -> [NSTextTab] {
+        components.map { $0.toNS() }
     }
 }
