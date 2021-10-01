@@ -35,10 +35,16 @@ public final class CocoAttribute: AttributeKeyValueConvertible {
         self.attribute = .attribute(key: key, value: value)
     }
     
-    public func on(_ range: Range<String.Index>) -> Self {
+    public func within(_ range: Range<String.Index>) -> Self {
         self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
         return self
     }
+    
+    public func within(_ range: () -> Range<String.Index>) -> Self {
+        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
+        return self
+    }
+    
 }
 
 extension CocoAttribute {
