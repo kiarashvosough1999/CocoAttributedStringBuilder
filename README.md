@@ -1,6 +1,7 @@
 
-
-![Elegant and Easy AttributedStringBuilder in Swift](https://github.com/kiarashvosough1999/CocoAttributedStringBuilder/blob/master/resources/coco_icon.png)
+<p align="center">
+  <img width="600" height="200" src="https://github.com/kiarashvosough1999/CocoAttributedStringBuilder/blob/master/resources/coco_icon.png">
+</p>
 
 [![Swift](https://img.shields.io/badge/Swift-5.3_or_Higher-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.1_5.2_5.3_5.4-Orange?style=flat-square)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS_9_or_Higher-yellowgreen?style=flat-square)](https://img.shields.io/badge/Platforms-macOS_iOS_tvOS_watchOS_Linux_Windows-Green?style=flat-square)
