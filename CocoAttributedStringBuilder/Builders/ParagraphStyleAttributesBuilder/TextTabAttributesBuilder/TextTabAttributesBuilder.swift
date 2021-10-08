@@ -7,7 +7,7 @@
 
 import UIKit
 
-@available(iOS 9.0, *)
+@available(iOS 7.0, *)
 public struct CocoTextTab: NSConvertible {
     
     private let textAlignment: NSTextAlignment
@@ -33,7 +33,7 @@ extension CocoTextTab {
     
 }
 
-@available(iOS 9.0, *)
+@available(iOS 7.0, *)
 public final class TextTab {
 
     public var tabs: [NSTextTab]
@@ -48,7 +48,7 @@ public final class TextTab {
 }
 
 @resultBuilder
-@available(iOS 9.0, *)
+@available(iOS 7.0, *)
 public struct TextTabAttributesBuilder {
     
     public static func buildExpression(_ expression: NSTextTab) -> CocoTextTab {

@@ -43,17 +43,9 @@ public enum CocoParagraphStyle {
     case paragraphSpacingBefore(CGFloat)
     case hyphenationFactor(Float)
     case defaultWritingDirection(languageName: String)
-    
-    @available(iOS 7.0, *)
     case tabStops([NSTextTab])
-
-    @available(iOS 7.0, *)
     case defaultTabInterval(CGFloat)
-
-    @available(iOS 9.0, *)
     case allowsDefaultTighteningForTruncation(Bool)
-
-    @available(iOS 9.0, *)
     case lineBreakStrategy(NSParagraphStyle.LineBreakStrategy)
 
 }
@@ -108,7 +100,7 @@ public struct ParagraphStyleBuilder {
         .defaultWritingDirection(languageName: expression)
     }
     
-    @available(iOS 9.0, *)
+    @available(iOS 7.0, *)
     public static func buildExpression(_ expression: TextTab) -> CocoParagraphStyle {
         .tabStops(expression.tabs)
     }

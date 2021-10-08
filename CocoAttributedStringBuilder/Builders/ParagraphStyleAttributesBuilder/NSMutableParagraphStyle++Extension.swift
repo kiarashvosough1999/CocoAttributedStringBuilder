@@ -55,11 +55,21 @@ internal final class ParagraphStyleAdapter: NSMutableParagraphStyle {
             case let .maximumLineHeight(value): maximumLineHeight = value
             case let .paragraphSpacingBefore(value): paragraphSpacingBefore = value
             case let .hyphenationFactor(value): hyphenationFactor = value
-            case let .tabStops(value): tabStops = value
-            case let .defaultTabInterval(value): defaultTabInterval = value
-            case let .allowsDefaultTighteningForTruncation(value): allowsDefaultTighteningForTruncation = value
-            case let .lineBreakStrategy(value): lineBreakStrategy = value
-            case let .defaultWritingDirection(languageName): baseWritingDirection = NSParagraphStyle.defaultWritingDirection(forLanguage: languageName)
+            case let .tabStops(value):
+                guard #available(iOS 7.0, *) else { fatalError("tabStops is available on ios 7 or later") }
+                tabStops = value
+            case let .defaultTabInterval(value):
+                guard #available(iOS 7.0, *) else { fatalError("tabStops is available on ios 7 or later") }
+                defaultTabInterval = value
+            case let .allowsDefaultTighteningForTruncation(value):
+                guard #available(iOS 7.0, *) else { fatalError("allowsDefaultTighteningForTruncation is available on ios 7 or later") }
+                allowsDefaultTighteningForTruncation = value
+            case let .lineBreakStrategy(value):
+                guard #available(iOS 9.0, *) else { fatalError("lineBreakStrategy is available on ios 7 or later") }
+                lineBreakStrategy = value
+            case let .defaultWritingDirection(languageName):
+                guard #available(iOS 9.0, *) else { fatalError("defaultWritingDirection is available on ios 7 or later") }
+                baseWritingDirection = NSParagraphStyle.defaultWritingDirection(forLanguage: languageName)
             }
         }
     }

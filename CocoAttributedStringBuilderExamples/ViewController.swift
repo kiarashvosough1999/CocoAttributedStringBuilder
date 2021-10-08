@@ -62,7 +62,7 @@ final class ViewController: UIViewController {
     /// Example of Using each builder without take advantage of meta-type of Attribute in each block
     @CocoAttributedStringBuilder
     func build() -> NSAttributedString {
-        CocoString("Test Builder\n kiarash vosough") { str in // str == "Test Builder\n kiarash vosough"
+        CocoString("Test Builder1") { str in // str == "Test Builder\n kiarash vosough"
             CocoAttribute.foregroundColor(.blue)
                 .within(str.startIndex..<str.firstIndex(of: "r")!) // make sure the range is valid, otherwise program will crash
 
@@ -75,7 +75,7 @@ final class ViewController: UIViewController {
                     CocoTextTab.tab(textAlignment: .left, location: 5)
                 }
 
-            }.within { str.startIndex..<str.firstIndex(of: "h")! } // if you need more space to specifying range, use this overload of method within whihc take a closure of return type range
+            }.within { str.startIndex..<str.firstIndex(of: "l")! } // if you need more space to specifying range, use this overload of method within whihc take a closure of return type range
             
             Shadow {
                 CocoShadow.shadowOffset(.init(width: 1.5, height: 5))
@@ -90,13 +90,13 @@ final class ViewController: UIViewController {
     /// Although for the sake of clean code I recommend to use provided meta-type
     @CocoAttributedStringBuilder
     func build2() -> NSAttributedString {
-        CocoString("Test 2 Builder\n kiarash vosough") { str, a in
+        CocoString("Test 2 Builder") { str, a in
             a.foregroundColor(.red) // b is a meta-type for CocoAttribute
                 .within(str.startIndex..<str.firstIndex(of: "r")!)
             
             TextAttachment { t in
-                CGRect.infinite // bounds is a unique attribute in TextAttachment, there is no diffrrence between thses two way of specifying it.
-                t.bounds(.infinite) // b is a meta-type for CocoAttachment
+                CGRect.infinite // bounds is a unique attribute in TextAttachment, there is no diffrrence between thses two way of specifying bounds.
+                t.bounds(.infinite) // t is a meta-type for CocoAttachment
             }
             
             
@@ -118,7 +118,7 @@ final class ViewController: UIViewController {
             }
             
             Shadow { b in
-                // there is no diffrrence between thses two way of specifying it.
+                // there is no diffrrence between thses two way of specifying shadowOffset.
                 CGSize(width: 1.5, height: 1)
                 b.shadowOffset(.init(width: 1.5, height: 1))
                 
