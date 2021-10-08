@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CocoAttributedStringBuilder"
-  spec.version      = "0.3.0"
+  spec.version      = "0.3.1"
   spec.summary      = "Pure swift library to build NSAttributedString"
 
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-  spec.source       = { :git => "https://github.com/kiarashvosough1999/CocoAttributedStringBuilder.git", :tag => "#{spec.version}" }
+  spec.source = { :git => "https://github.com/kiarashvosough1999/CocoAttributedStringBuilder.git", :tag => "#{spec.version}" }
 
   spec.source_files  =  "CocoAttributedStringBuilder/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
