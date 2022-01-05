@@ -7,9 +7,9 @@
 
 import Foundation
 
-public protocol AttributeRangeProvider: AnyObject {
+public protocol AttributeRangeProvider {
     
-    typealias RangeBlock = () ->  Range<String.Index>
+    typealias RangeBlock = () -> Range<String.Index>
     
     func within(_ range: Range<String.Index>) -> Self
     

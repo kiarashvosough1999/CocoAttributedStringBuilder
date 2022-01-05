@@ -30,12 +30,12 @@ import UIKit
 public enum CocoShadow {
     case shadowOffset(CGSize)
     case shadowBlurRadius(CGFloat)
-    case shadowColor(UIColor? = .black.withAlphaComponent(1/3))
+    case shadowColor(UIColor = .black.withAlphaComponent(1/3))
 }
 
-public final class Shadow: AttributeKeyValueConvertible, AttributeRangeProvider {
+public struct Shadow: AttributeKeyValueConvertible, AttributeRangeProvider {
     
-    public var attribute: CocoStringAttributeHolder
+    public let attribute: CocoStringAttributeHolder
     
     public init(@ShadowBuilder _ builder: BuilderBlock) {
         self.attribute = builder()
@@ -44,14 +44,16 @@ public final class Shadow: AttributeKeyValueConvertible, AttributeRangeProvider 
         self.attribute = builder(CocoShadow.self)
     }
     
+    private init(attribute: CocoStringAttributeHolder) {
+        self.attribute = attribute
+    }
+    
     public func within(_ range: Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
-        return self
+        return Shadow(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range))
     }
     
     public func within(_ range: () -> Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
-        return self
+        return Shadow(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range()))
     }
 }
 

@@ -27,7 +27,7 @@
 
 import UIKit
 
-public final class CocoAttribute: AttributeKeyValueConvertible {
+public struct CocoAttribute: AttributeKeyValueConvertible {
     
     public var attribute: CocoStringAttributeHolder
     
@@ -35,14 +35,16 @@ public final class CocoAttribute: AttributeKeyValueConvertible {
         self.attribute = .attribute(key: key, value: value)
     }
     
+    private init(attribute: CocoStringAttributeHolder) {
+        self.attribute = attribute
+    }
+    
     public func within(_ range: Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
-        return self
+        return CocoAttribute(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range))
     }
     
     public func within(_ range: () -> Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
-        return self
+        return CocoAttribute(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range()))
     }
     
 }

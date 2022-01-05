@@ -50,7 +50,7 @@ public enum CocoParagraphStyle {
 
 }
 
-public final class ParagrapghStyle: AttributeKeyValueConvertible, AttributeRangeProvider {
+public struct ParagrapghStyle: AttributeKeyValueConvertible, AttributeRangeProvider {
     
     public var attribute: CocoStringAttributeHolder
     
@@ -62,14 +62,16 @@ public final class ParagrapghStyle: AttributeKeyValueConvertible, AttributeRange
         self.attribute = builder(CocoParagraphStyle.self)
     }
     
+    private init(attribute: CocoStringAttributeHolder) {
+        self.attribute = attribute
+    }
+    
     public func within(_ range: Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
-        return self
+        return ParagrapghStyle(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range))
     }
     
     public func within(_ range: () -> Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
-        return self
+        return ParagrapghStyle(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range()))
     }
 }
 

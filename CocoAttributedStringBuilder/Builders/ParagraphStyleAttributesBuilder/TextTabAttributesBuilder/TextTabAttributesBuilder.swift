@@ -34,7 +34,7 @@ extension CocoTextTab {
 }
 
 @available(iOS 7.0, *)
-public final class TextTab {
+public struct TextTab {
 
     public var tabs: [NSTextTab]
     

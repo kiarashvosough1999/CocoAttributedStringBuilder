@@ -27,7 +27,7 @@
 
 import Foundation
 
-public protocol AttributeKeyValueConvertible: AnyObject {
+public protocol AttributeKeyValueConvertible {
     
     var attribute: CocoStringAttributeHolder { get }
     

@@ -36,9 +36,9 @@ public enum CocoAttachment {
     case fileWrapper(FileWrapper)
 }
 
-public final class TextAttachment: AttributeKeyValueConvertible, AttributeRangeProvider {
+public struct TextAttachment: AttributeKeyValueConvertible, AttributeRangeProvider {
     
-    public var attribute: CocoStringAttributeHolder
+    public let attribute: CocoStringAttributeHolder
     
     public init(@TextAttachmentBuilder _ builder: BuilderBlock) {
         self.attribute = builder()
@@ -48,14 +48,16 @@ public final class TextAttachment: AttributeKeyValueConvertible, AttributeRangeP
         self.attribute = builder(CocoAttachment.self)
     }
     
+    private init(attribute: CocoStringAttributeHolder) {
+        self.attribute = attribute
+    }
+    
     public func within(_ range: Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range)
-        return self
+        return TextAttachment(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range))
     }
     
     public func within(_ range: () -> Range<String.Index>) -> Self {
-        self.attribute = .rangedAttribute(key: attribute.key, value: attribute.value, range: range())
-        return self
+        return TextAttachment(attribute: .rangedAttribute(key: attribute.key, value: attribute.value, range: range()))
     }
 }
 
