@@ -29,6 +29,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [x] Specify range for each attribute
 - [ ] Support if-statement on builders
 - [ ] Provide operator to define an attribute
+- [ ] SPM Support
 
 ## Requirements
 
