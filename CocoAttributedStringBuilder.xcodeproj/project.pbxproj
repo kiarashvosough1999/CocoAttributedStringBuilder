@@ -70,6 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DEA9C7A02790C1FD00F3B091 /* CocoAttributedStringBuilder_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_IOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-iphoneos/CocoAttributedStringBuilder_IOS.framework"; sourceTree = "<absolute>"; };
+		DEA9C7A12790C1FD00F3B091 /* CocoAttributedStringBuilder_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_macOS.framework; path = /Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug/CocoAttributedStringBuilder_macOS.framework; sourceTree = "<absolute>"; };
+		DEA9C7A22790C1FD00F3B091 /* CocoAttributedStringBuilder_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_watchOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-watchos/CocoAttributedStringBuilder_watchOS.framework"; sourceTree = "<absolute>"; };
+		DEA9C7A32790C1FD00F3B091 /* CocoAttributedStringBuilder_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_tvOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-appletvos/CocoAttributedStringBuilder_tvOS.framework"; sourceTree = "<absolute>"; };
 		DECC42232790B95A008A4A60 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DECC42252790B95A008A4A60 /* CocoAttributedStringBuilder.podspec.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = CocoAttributedStringBuilder.podspec.zip; sourceTree = "<group>"; };
 		DECC42262790B95A008A4A60 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -91,10 +95,6 @@
 		DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle++Extension.swift"; sourceTree = "<group>"; };
 		DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphStyleAttributesBuilder.swift; sourceTree = "<group>"; };
 		DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTabAttributesBuilder.swift; sourceTree = "<group>"; };
-		DECC43072790C089008A4A60 /* CocoAttributedStringBuilder_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_watchOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-watchos/CocoAttributedStringBuilder_watchOS.framework"; sourceTree = "<absolute>"; };
-		DECC43082790C08C008A4A60 /* CocoAttributedStringBuilder_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_tvOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-appletvos/CocoAttributedStringBuilder_tvOS.framework"; sourceTree = "<absolute>"; };
-		DECC43112790C139008A4A60 /* CocoAttributedStringBuilder_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_IOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-iphoneos/CocoAttributedStringBuilder_IOS.framework"; sourceTree = "<absolute>"; };
-		DECC43122790C153008A4A60 /* CocoAttributedStringBuilder_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_macOS.framework; path = /Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug/CocoAttributedStringBuilder_macOS.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,7 +309,7 @@
 			);
 			name = "CocoAttributedStringBuilder IOS";
 			productName = "CocoAttributedStringBuilder IOS";
-			productReference = DECC43112790C139008A4A60 /* CocoAttributedStringBuilder_IOS.framework */;
+			productReference = DEA9C7A02790C1FD00F3B091 /* CocoAttributedStringBuilder_IOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42B92790BEFC008A4A60 /* CocoAttributedStringBuilder macOS */ = {
@@ -327,7 +327,7 @@
 			);
 			name = "CocoAttributedStringBuilder macOS";
 			productName = "CocoAttributedStringBuilder macOS";
-			productReference = DECC43122790C153008A4A60 /* CocoAttributedStringBuilder_macOS.framework */;
+			productReference = DEA9C7A12790C1FD00F3B091 /* CocoAttributedStringBuilder_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42D42790BF24008A4A60 /* CocoAttributedStringBuilder watchOS */ = {
@@ -345,7 +345,7 @@
 			);
 			name = "CocoAttributedStringBuilder watchOS";
 			productName = "CocoAttributedStringBuilder watchOS";
-			productReference = DECC43072790C089008A4A60 /* CocoAttributedStringBuilder_watchOS.framework */;
+			productReference = DEA9C7A22790C1FD00F3B091 /* CocoAttributedStringBuilder_watchOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42EF2790BF39008A4A60 /* CocoAttributedStringBuilder tvOS */ = {
@@ -363,7 +363,7 @@
 			);
 			name = "CocoAttributedStringBuilder tvOS";
 			productName = "CocoAttributedStringBuilder tvOS";
-			productReference = DECC43082790C08C008A4A60 /* CocoAttributedStringBuilder_tvOS.framework */;
+			productReference = DEA9C7A32790C1FD00F3B091 /* CocoAttributedStringBuilder_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
