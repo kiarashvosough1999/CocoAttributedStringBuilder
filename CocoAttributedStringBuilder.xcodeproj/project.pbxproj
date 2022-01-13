@@ -7,334 +7,364 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE689BE527050178002B143E /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */; };
-		DE6B467326FD0A930038F720 /* CocoAttributedStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */; };
-		DE6B467826FD0A930038F720 /* CocoAttributedStringBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B467726FD0A930038F720 /* CocoAttributedStringBuilderTests.swift */; };
-		DE6B467A26FD0A930038F720 /* CocoAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6B466C26FD0A930038F720 /* CocoAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE6B468A26FD0B020038F720 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B468926FD0B020038F720 /* AppDelegate.swift */; };
-		DE6B468C26FD0B020038F720 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B468B26FD0B020038F720 /* SceneDelegate.swift */; };
-		DE6B468E26FD0B020038F720 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B468D26FD0B020038F720 /* ViewController.swift */; };
-		DE6B469126FD0B020038F720 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6B468F26FD0B020038F720 /* Main.storyboard */; };
-		DE6B469326FD0B030038F720 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6B469226FD0B030038F720 /* Assets.xcassets */; };
-		DE6B469626FD0B030038F720 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6B469426FD0B030038F720 /* LaunchScreen.storyboard */; };
-		DE6B469E26FD0DE90038F720 /* CocoAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B469B26FD0DE90038F720 /* CocoAttributedStringBuilder.swift */; };
-		DE6B469F26FD0DE90038F720 /* CocoStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B469C26FD0DE90038F720 /* CocoStringBuilder.swift */; };
-		DE6B46A026FD0DE90038F720 /* CocoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B469D26FD0DE90038F720 /* CocoAttribute.swift */; };
-		DE6B46A326FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46A226FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift */; };
-		DE6B46A726FD0E600038F720 /* TextAttachmentAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46A626FD0E5F0038F720 /* TextAttachmentAttributesBuilder.swift */; };
-		DE6B46A926FD0E650038F720 /* ShadowAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46A826FD0E650038F720 /* ShadowAttributesBuilder.swift */; };
-		DE6B46AB26FD11200038F720 /* CocoAttributedStringBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */; };
-		DE6B46AC26FD11200038F720 /* CocoAttributedStringBuilder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DE6B46B226FD264B0038F720 /* NSTextAttachment++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B126FD264B0038F720 /* NSTextAttachment++Extension.swift */; };
-		DE6B46B426FD26CB0038F720 /* NSShadow++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B326FD26CB0038F720 /* NSShadow++Extension.swift */; };
-		DE6B46B626FD27270038F720 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */; };
-		DE6B46B826FD4DD00038F720 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46B726FD4DD00038F720 /* CocoStringAttributeHolder.swift */; };
-		DE6B46BB26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */; };
-		DE6B46BF26FD4E6D0038F720 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46BE26FD4E6D0038F720 /* String++Extension.swift */; };
-		DE6B46C126FD4EF10038F720 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46C026FD4EF10038F720 /* Helpers.swift */; };
-		DE6B46C326FD55C30038F720 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6B46C226FD55C30038F720 /* NSMutableAttributedString++Extension.swift */; };
-		DEC7F1BC27074E4D00CE5EF6 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */; };
+		DECC42A62790BE38008A4A60 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */; };
+		DECC42A72790BE38008A4A60 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */; };
+		DECC42A82790BE38008A4A60 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */; };
+		DECC42A92790BE38008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */; };
+		DECC42AA2790BE38008A4A60 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426F2790BC8B008A4A60 /* String++Extension.swift */; };
+		DECC42AB2790BE38008A4A60 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42752790BC90008A4A60 /* Helpers.swift */; };
+		DECC42AC2790BE38008A4A60 /* NSTextAttachment++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */; };
+		DECC42AD2790BE38008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */; };
+		DECC42AE2790BE38008A4A60 /* NSShadow++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */; };
+		DECC42AF2790BE38008A4A60 /* ShadowAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */; };
+		DECC42B02790BE38008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */; };
+		DECC42B12790BE38008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */; };
+		DECC42B22790BE38008A4A60 /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */; };
+		DECC42B32790BE38008A4A60 /* CocoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42582790BBF6008A4A60 /* CocoAttribute.swift */; };
+		DECC42B42790BE38008A4A60 /* CocoAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */; };
+		DECC42C12790BF0B008A4A60 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */; };
+		DECC42C22790BF0B008A4A60 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */; };
+		DECC42C32790BF0B008A4A60 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */; };
+		DECC42C42790BF0B008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */; };
+		DECC42C52790BF0B008A4A60 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426F2790BC8B008A4A60 /* String++Extension.swift */; };
+		DECC42C62790BF0B008A4A60 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42752790BC90008A4A60 /* Helpers.swift */; };
+		DECC42C72790BF0B008A4A60 /* NSTextAttachment++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */; };
+		DECC42C82790BF0B008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */; };
+		DECC42C92790BF0B008A4A60 /* NSShadow++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */; };
+		DECC42CA2790BF0B008A4A60 /* ShadowAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */; };
+		DECC42CB2790BF0B008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */; };
+		DECC42CC2790BF0B008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */; };
+		DECC42CD2790BF0B008A4A60 /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */; };
+		DECC42CE2790BF0B008A4A60 /* CocoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42582790BBF6008A4A60 /* CocoAttribute.swift */; };
+		DECC42CF2790BF0B008A4A60 /* CocoAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */; };
+		DECC42DC2790BF30008A4A60 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */; };
+		DECC42DD2790BF30008A4A60 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */; };
+		DECC42DE2790BF30008A4A60 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */; };
+		DECC42DF2790BF30008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */; };
+		DECC42E02790BF30008A4A60 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426F2790BC8B008A4A60 /* String++Extension.swift */; };
+		DECC42E12790BF30008A4A60 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42752790BC90008A4A60 /* Helpers.swift */; };
+		DECC42E22790BF30008A4A60 /* NSTextAttachment++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */; };
+		DECC42E32790BF30008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */; };
+		DECC42E42790BF30008A4A60 /* NSShadow++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */; };
+		DECC42E52790BF30008A4A60 /* ShadowAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */; };
+		DECC42E62790BF30008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */; };
+		DECC42E72790BF30008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */; };
+		DECC42E82790BF30008A4A60 /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */; };
+		DECC42E92790BF30008A4A60 /* CocoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42582790BBF6008A4A60 /* CocoAttribute.swift */; };
+		DECC42EA2790BF30008A4A60 /* CocoAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */; };
+		DECC42F72790BF48008A4A60 /* AttributeKeyValueConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */; };
+		DECC42F82790BF48008A4A60 /* AttributeRangeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */; };
+		DECC42F92790BF48008A4A60 /* CocoStringAttributeHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */; };
+		DECC42FA2790BF48008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */; };
+		DECC42FB2790BF48008A4A60 /* String++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC426F2790BC8B008A4A60 /* String++Extension.swift */; };
+		DECC42FC2790BF48008A4A60 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42752790BC90008A4A60 /* Helpers.swift */; };
+		DECC42FD2790BF48008A4A60 /* NSTextAttachment++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */; };
+		DECC42FE2790BF48008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */; };
+		DECC42FF2790BF48008A4A60 /* NSShadow++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */; };
+		DECC43002790BF48008A4A60 /* ShadowAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */; };
+		DECC43012790BF48008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */; };
+		DECC43022790BF48008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */; };
+		DECC43032790BF48008A4A60 /* TextTabAttributesBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */; };
+		DECC43042790BF48008A4A60 /* CocoAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42582790BBF6008A4A60 /* CocoAttribute.swift */; };
+		DECC43052790BF48008A4A60 /* CocoAttributedStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		DE6B467426FD0A930038F720 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE6B466026FD0A930038F720 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE6B466826FD0A930038F720;
-			remoteInfo = CocoAttributedStringBuilder;
-		};
-		DE6B46AD26FD11200038F720 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DE6B466026FD0A930038F720 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DE6B466826FD0A930038F720;
-			remoteInfo = CocoAttributedStringBuilder;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		DE6B46AF26FD11200038F720 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DE6B46AC26FD11200038F720 /* CocoAttributedStringBuilder.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTabAttributesBuilder.swift; sourceTree = "<group>"; };
-		DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoAttributedStringBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE6B466C26FD0A930038F720 /* CocoAttributedStringBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoAttributedStringBuilder.h; sourceTree = "<group>"; };
-		DE6B466D26FD0A930038F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE6B467226FD0A930038F720 /* CocoAttributedStringBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoAttributedStringBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE6B467726FD0A930038F720 /* CocoAttributedStringBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoAttributedStringBuilderTests.swift; sourceTree = "<group>"; };
-		DE6B467926FD0A930038F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE6B468726FD0B020038F720 /* CocoAttributedStringBuilderExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoAttributedStringBuilderExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE6B468926FD0B020038F720 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE6B468B26FD0B020038F720 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE6B468D26FD0B020038F720 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DE6B469026FD0B020038F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DE6B469226FD0B030038F720 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DE6B469526FD0B030038F720 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DE6B469726FD0B030038F720 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE6B469B26FD0DE90038F720 /* CocoAttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoAttributedStringBuilder.swift; sourceTree = "<group>"; };
-		DE6B469C26FD0DE90038F720 /* CocoStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoStringBuilder.swift; sourceTree = "<group>"; };
-		DE6B469D26FD0DE90038F720 /* CocoAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoAttribute.swift; sourceTree = "<group>"; };
-		DE6B46A226FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphStyleAttributesBuilder.swift; sourceTree = "<group>"; };
-		DE6B46A626FD0E5F0038F720 /* TextAttachmentAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttachmentAttributesBuilder.swift; sourceTree = "<group>"; };
-		DE6B46A826FD0E650038F720 /* ShadowAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowAttributesBuilder.swift; sourceTree = "<group>"; };
-		DE6B46B126FD264B0038F720 /* NSTextAttachment++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment++Extension.swift"; sourceTree = "<group>"; };
-		DE6B46B326FD26CB0038F720 /* NSShadow++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSShadow++Extension.swift"; sourceTree = "<group>"; };
-		DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle++Extension.swift"; sourceTree = "<group>"; };
-		DE6B46B726FD4DD00038F720 /* CocoStringAttributeHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoStringAttributeHolder.swift; sourceTree = "<group>"; };
-		DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeKeyValueConvertible.swift; sourceTree = "<group>"; };
-		DE6B46BE26FD4E6D0038F720 /* String++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String++Extension.swift"; sourceTree = "<group>"; };
-		DE6B46C026FD4EF10038F720 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		DE6B46C226FD55C30038F720 /* NSMutableAttributedString++Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString++Extension.swift"; sourceTree = "<group>"; };
-		DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeRangeProvider.swift; sourceTree = "<group>"; };
+		DECC42232790B95A008A4A60 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		DECC42252790B95A008A4A60 /* CocoAttributedStringBuilder.podspec.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = CocoAttributedStringBuilder.podspec.zip; sourceTree = "<group>"; };
+		DECC42262790B95A008A4A60 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DECC42272790B95A008A4A60 /* CocoAttributedStringBuilder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CocoAttributedStringBuilder.podspec; sourceTree = "<group>"; };
+		DECC42282790B95A008A4A60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DECC42532790BB9F008A4A60 /* coco_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coco_icon.png; sourceTree = "<group>"; };
+		DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoAttributedStringBuilder.swift; sourceTree = "<group>"; };
+		DECC42582790BBF6008A4A60 /* CocoAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoAttribute.swift; sourceTree = "<group>"; };
+		DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeRangeProvider.swift; sourceTree = "<group>"; };
+		DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributeKeyValueConvertible.swift; sourceTree = "<group>"; };
+		DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CocoStringAttributeHolder.swift; sourceTree = "<group>"; };
+		DECC426F2790BC8B008A4A60 /* String++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String++Extension.swift"; sourceTree = "<group>"; };
+		DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString++Extension.swift"; sourceTree = "<group>"; };
+		DECC42752790BC90008A4A60 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment++Extension.swift"; sourceTree = "<group>"; };
+		DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAttachmentAttributesBuilder.swift; sourceTree = "<group>"; };
+		DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSShadow++Extension.swift"; sourceTree = "<group>"; };
+		DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowAttributesBuilder.swift; sourceTree = "<group>"; };
+		DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableParagraphStyle++Extension.swift"; sourceTree = "<group>"; };
+		DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParagraphStyleAttributesBuilder.swift; sourceTree = "<group>"; };
+		DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTabAttributesBuilder.swift; sourceTree = "<group>"; };
+		DECC43072790C089008A4A60 /* CocoAttributedStringBuilder_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_watchOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-watchos/CocoAttributedStringBuilder_watchOS.framework"; sourceTree = "<absolute>"; };
+		DECC43082790C08C008A4A60 /* CocoAttributedStringBuilder_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_tvOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-appletvos/CocoAttributedStringBuilder_tvOS.framework"; sourceTree = "<absolute>"; };
+		DECC43112790C139008A4A60 /* CocoAttributedStringBuilder_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_IOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-iphoneos/CocoAttributedStringBuilder_IOS.framework"; sourceTree = "<absolute>"; };
+		DECC43122790C153008A4A60 /* CocoAttributedStringBuilder_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_macOS.framework; path = /Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug/CocoAttributedStringBuilder_macOS.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DE6B466626FD0A930038F720 /* Frameworks */ = {
+		DECC429C2790BDFA008A4A60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B466F26FD0A930038F720 /* Frameworks */ = {
+		DECC42B72790BEFC008A4A60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B467326FD0A930038F720 /* CocoAttributedStringBuilder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B468426FD0B020038F720 /* Frameworks */ = {
+		DECC42D22790BF24008A4A60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B46AB26FD11200038F720 /* CocoAttributedStringBuilder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42ED2790BF39008A4A60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE46831126FF01F700D16DDF /* Builders */ = {
+		DE6B465F26FD0A930038F720 = {
 			isa = PBXGroup;
 			children = (
-				DE6B46A526FD0E500038F720 /* TextAttachmentAttributesBuilder */,
-				DE6B46A426FD0E350038F720 /* ShadowAttributesBuilder */,
-				DE6B46A126FD0E1A0038F720 /* ParagraphStyleAttributesBuilder */,
-				DE6B469B26FD0DE90038F720 /* CocoAttributedStringBuilder.swift */,
-				DE6B469C26FD0DE90038F720 /* CocoStringBuilder.swift */,
+				DECC42492790BB47008A4A60 /* Resources */,
+				DECC42482790BB32008A4A60 /* Sources */,
+				DECC42472790BB19008A4A60 /* Documentation */,
+				DECC42462790BAF7008A4A60 /* Deployment */,
+			);
+			sourceTree = "<group>";
+		};
+		DECC42462790BAF7008A4A60 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42272790B95A008A4A60 /* CocoAttributedStringBuilder.podspec */,
+				DECC42252790B95A008A4A60 /* CocoAttributedStringBuilder.podspec.zip */,
+				DECC42262790B95A008A4A60 /* LICENSE */,
+				DECC42232790B95A008A4A60 /* Package.swift */,
+			);
+			name = Deployment;
+			sourceTree = "<group>";
+		};
+		DECC42472790BB19008A4A60 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42282790B95A008A4A60 /* README.md */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		DECC42482790BB32008A4A60 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42612790BC1C008A4A60 /* Protocols */,
+				DECC42602790BC17008A4A60 /* Models */,
+				DECC425F2790BC12008A4A60 /* Extensions */,
+				DECC425E2790BC0C008A4A60 /* Common */,
+				DECC425D2790BC05008A4A60 /* Builders */,
+				DECC42582790BBF6008A4A60 /* CocoAttribute.swift */,
+				DECC42572790BBF6008A4A60 /* CocoAttributedStringBuilder.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DECC42492790BB47008A4A60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42532790BB9F008A4A60 /* coco_icon.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DECC425D2790BC05008A4A60 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42642790BC4D008A4A60 /* TextAttachmentAttributesBuilder */,
+				DECC42632790BC48008A4A60 /* ShadowAttributesBuilder */,
+				DECC42622790BC43008A4A60 /* ParagraphStyleAttributesBuilder */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
 		};
-		DE46831226FF021100D16DDF /* Extensions */ = {
+		DECC425E2790BC0C008A4A60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B46BE26FD4E6D0038F720 /* String++Extension.swift */,
-				DE6B46C226FD55C30038F720 /* NSMutableAttributedString++Extension.swift */,
+				DECC42752790BC90008A4A60 /* Helpers.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DECC425F2790BC12008A4A60 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DECC42702790BC8B008A4A60 /* NSMutableAttributedString++Extension.swift */,
+				DECC426F2790BC8B008A4A60 /* String++Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		DE46831326FF021D00D16DDF /* Models */ = {
+		DECC42602790BC17008A4A60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B46B726FD4DD00038F720 /* CocoStringAttributeHolder.swift */,
+				DECC426C2790BC84008A4A60 /* CocoStringAttributeHolder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DE689BE32705015F002B143E /* TextTabAttributesBuilder */ = {
+		DECC42612790BC1C008A4A60 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				DE689BE427050178002B143E /* TextTabAttributesBuilder.swift */,
+				DECC42672790BC7E008A4A60 /* AttributeKeyValueConvertible.swift */,
+				DECC42662790BC7E008A4A60 /* AttributeRangeProvider.swift */,
 			);
-			path = TextTabAttributesBuilder;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
-		DE6B465F26FD0A930038F720 = {
+		DECC42622790BC43008A4A60 /* ParagraphStyleAttributesBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B466B26FD0A930038F720 /* CocoAttributedStringBuilder */,
-				DE6B467626FD0A930038F720 /* CocoAttributedStringBuilderTests */,
-				DE6B468826FD0B020038F720 /* CocoAttributedStringBuilderExamples */,
-				DE6B466A26FD0A930038F720 /* Products */,
-				DE6B46AA26FD11200038F720 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		DE6B466A26FD0A930038F720 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */,
-				DE6B467226FD0A930038F720 /* CocoAttributedStringBuilderTests.xctest */,
-				DE6B468726FD0B020038F720 /* CocoAttributedStringBuilderExamples.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DE6B466B26FD0A930038F720 /* CocoAttributedStringBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				DE46831326FF021D00D16DDF /* Models */,
-				DE46831226FF021100D16DDF /* Extensions */,
-				DE46831126FF01F700D16DDF /* Builders */,
-				DE6B46B926FD4DF50038F720 /* Protocols */,
-				DE6B469D26FD0DE90038F720 /* CocoAttribute.swift */,
-				DE6B46C026FD4EF10038F720 /* Helpers.swift */,
-				DE6B466C26FD0A930038F720 /* CocoAttributedStringBuilder.h */,
-				DE6B466D26FD0A930038F720 /* Info.plist */,
-			);
-			path = CocoAttributedStringBuilder;
-			sourceTree = "<group>";
-		};
-		DE6B467626FD0A930038F720 /* CocoAttributedStringBuilderTests */ = {
-			isa = PBXGroup;
-			children = (
-				DE6B467726FD0A930038F720 /* CocoAttributedStringBuilderTests.swift */,
-				DE6B467926FD0A930038F720 /* Info.plist */,
-			);
-			path = CocoAttributedStringBuilderTests;
-			sourceTree = "<group>";
-		};
-		DE6B468826FD0B020038F720 /* CocoAttributedStringBuilderExamples */ = {
-			isa = PBXGroup;
-			children = (
-				DE6B468926FD0B020038F720 /* AppDelegate.swift */,
-				DE6B468B26FD0B020038F720 /* SceneDelegate.swift */,
-				DE6B468D26FD0B020038F720 /* ViewController.swift */,
-				DE6B468F26FD0B020038F720 /* Main.storyboard */,
-				DE6B469226FD0B030038F720 /* Assets.xcassets */,
-				DE6B469426FD0B030038F720 /* LaunchScreen.storyboard */,
-				DE6B469726FD0B030038F720 /* Info.plist */,
-			);
-			path = CocoAttributedStringBuilderExamples;
-			sourceTree = "<group>";
-		};
-		DE6B46A126FD0E1A0038F720 /* ParagraphStyleAttributesBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				DE689BE32705015F002B143E /* TextTabAttributesBuilder */,
-				DE6B46A226FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift */,
-				DE6B46B526FD27270038F720 /* NSMutableParagraphStyle++Extension.swift */,
+				DECC42842790BCA4008A4A60 /* NSMutableParagraphStyle++Extension.swift */,
+				DECC42852790BCA4008A4A60 /* ParagraphStyleAttributesBuilder.swift */,
+				DECC42652790BC58008A4A60 /* TextTabAttributesBuilder */,
 			);
 			path = ParagraphStyleAttributesBuilder;
 			sourceTree = "<group>";
 		};
-		DE6B46A426FD0E350038F720 /* ShadowAttributesBuilder */ = {
+		DECC42632790BC48008A4A60 /* ShadowAttributesBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B46A826FD0E650038F720 /* ShadowAttributesBuilder.swift */,
-				DE6B46B326FD26CB0038F720 /* NSShadow++Extension.swift */,
+				DECC427E2790BC9D008A4A60 /* NSShadow++Extension.swift */,
+				DECC427F2790BC9D008A4A60 /* ShadowAttributesBuilder.swift */,
 			);
 			path = ShadowAttributesBuilder;
 			sourceTree = "<group>";
 		};
-		DE6B46A526FD0E500038F720 /* TextAttachmentAttributesBuilder */ = {
+		DECC42642790BC4D008A4A60 /* TextAttachmentAttributesBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				DE6B46A626FD0E5F0038F720 /* TextAttachmentAttributesBuilder.swift */,
-				DE6B46B126FD264B0038F720 /* NSTextAttachment++Extension.swift */,
+				DECC42782790BC97008A4A60 /* NSTextAttachment++Extension.swift */,
+				DECC42792790BC97008A4A60 /* TextAttachmentAttributesBuilder.swift */,
 			);
 			path = TextAttachmentAttributesBuilder;
 			sourceTree = "<group>";
 		};
-		DE6B46AA26FD11200038F720 /* Frameworks */ = {
+		DECC42652790BC58008A4A60 /* TextTabAttributesBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				DECC428A2790BCAA008A4A60 /* TextTabAttributesBuilder.swift */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DE6B46B926FD4DF50038F720 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				DE6B46BA26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift */,
-				DEC7F1BB27074E4D00CE5EF6 /* AttributeRangeProvider.swift */,
-			);
-			path = Protocols;
+			path = TextTabAttributesBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DE6B466426FD0A930038F720 /* Headers */ = {
+		DECC429A2790BDFA008A4A60 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B467A26FD0A930038F720 /* CocoAttributedStringBuilder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42B52790BEFC008A4A60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42D02790BF24008A4A60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42EB2790BF39008A4A60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DE6B466826FD0A930038F720 /* CocoAttributedStringBuilder */ = {
+		DECC429E2790BDFA008A4A60 /* CocoAttributedStringBuilder IOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE6B467D26FD0A930038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder" */;
+			buildConfigurationList = DECC42A32790BDFA008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder IOS" */;
 			buildPhases = (
-				DE6B466426FD0A930038F720 /* Headers */,
-				DE6B466526FD0A930038F720 /* Sources */,
-				DE6B466626FD0A930038F720 /* Frameworks */,
-				DE6B466726FD0A930038F720 /* Resources */,
+				DECC429A2790BDFA008A4A60 /* Headers */,
+				DECC429B2790BDFA008A4A60 /* Sources */,
+				DECC429C2790BDFA008A4A60 /* Frameworks */,
+				DECC429D2790BDFA008A4A60 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CocoAttributedStringBuilder;
-			productName = CocoAttributedStringBuilder;
-			productReference = DE6B466926FD0A930038F720 /* CocoAttributedStringBuilder.framework */;
+			name = "CocoAttributedStringBuilder IOS";
+			productName = "CocoAttributedStringBuilder IOS";
+			productReference = DECC43112790C139008A4A60 /* CocoAttributedStringBuilder_IOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DE6B467126FD0A930038F720 /* CocoAttributedStringBuilderTests */ = {
+		DECC42B92790BEFC008A4A60 /* CocoAttributedStringBuilder macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE6B468026FD0A930038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilderTests" */;
+			buildConfigurationList = DECC42BE2790BEFC008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder macOS" */;
 			buildPhases = (
-				DE6B466E26FD0A930038F720 /* Sources */,
-				DE6B466F26FD0A930038F720 /* Frameworks */,
-				DE6B467026FD0A930038F720 /* Resources */,
+				DECC42B52790BEFC008A4A60 /* Headers */,
+				DECC42B62790BEFC008A4A60 /* Sources */,
+				DECC42B72790BEFC008A4A60 /* Frameworks */,
+				DECC42B82790BEFC008A4A60 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE6B467526FD0A930038F720 /* PBXTargetDependency */,
 			);
-			name = CocoAttributedStringBuilderTests;
-			productName = CocoAttributedStringBuilderTests;
-			productReference = DE6B467226FD0A930038F720 /* CocoAttributedStringBuilderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "CocoAttributedStringBuilder macOS";
+			productName = "CocoAttributedStringBuilder macOS";
+			productReference = DECC43122790C153008A4A60 /* CocoAttributedStringBuilder_macOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
-		DE6B468626FD0B020038F720 /* CocoAttributedStringBuilderExamples */ = {
+		DECC42D42790BF24008A4A60 /* CocoAttributedStringBuilder watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE6B469826FD0B030038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilderExamples" */;
+			buildConfigurationList = DECC42D92790BF24008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder watchOS" */;
 			buildPhases = (
-				DE6B468326FD0B020038F720 /* Sources */,
-				DE6B468426FD0B020038F720 /* Frameworks */,
-				DE6B468526FD0B020038F720 /* Resources */,
-				DE6B46AF26FD11200038F720 /* Embed Frameworks */,
+				DECC42D02790BF24008A4A60 /* Headers */,
+				DECC42D12790BF24008A4A60 /* Sources */,
+				DECC42D22790BF24008A4A60 /* Frameworks */,
+				DECC42D32790BF24008A4A60 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DE6B46AE26FD11200038F720 /* PBXTargetDependency */,
 			);
-			name = CocoAttributedStringBuilderExamples;
-			productName = CocoAttributedStringBuilderExamples;
-			productReference = DE6B468726FD0B020038F720 /* CocoAttributedStringBuilderExamples.app */;
-			productType = "com.apple.product-type.application";
+			name = "CocoAttributedStringBuilder watchOS";
+			productName = "CocoAttributedStringBuilder watchOS";
+			productReference = DECC43072790C089008A4A60 /* CocoAttributedStringBuilder_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DECC42EF2790BF39008A4A60 /* CocoAttributedStringBuilder tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DECC42F42790BF39008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder tvOS" */;
+			buildPhases = (
+				DECC42EB2790BF39008A4A60 /* Headers */,
+				DECC42EC2790BF39008A4A60 /* Sources */,
+				DECC42ED2790BF39008A4A60 /* Frameworks */,
+				DECC42EE2790BF39008A4A60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CocoAttributedStringBuilder tvOS";
+			productName = "CocoAttributedStringBuilder tvOS";
+			productReference = DECC43082790C08C008A4A60 /* CocoAttributedStringBuilder_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -342,18 +372,20 @@
 		DE6B466026FD0A930038F720 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					DE6B466826FD0A930038F720 = {
-						CreatedOnToolsVersion = 12.5.1;
-						LastSwiftMigration = 1250;
+					DECC429E2790BDFA008A4A60 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
-					DE6B467126FD0A930038F720 = {
-						CreatedOnToolsVersion = 12.5.1;
+					DECC42B92790BEFC008A4A60 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
-					DE6B468626FD0B020038F720 = {
-						CreatedOnToolsVersion = 12.5.1;
+					DECC42D42790BF24008A4A60 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					DECC42EF2790BF39008A4A60 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -366,119 +398,139 @@
 				Base,
 			);
 			mainGroup = DE6B465F26FD0A930038F720;
-			productRefGroup = DE6B466A26FD0A930038F720 /* Products */;
+			productRefGroup = DE6B465F26FD0A930038F720;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE6B466826FD0A930038F720 /* CocoAttributedStringBuilder */,
-				DE6B467126FD0A930038F720 /* CocoAttributedStringBuilderTests */,
-				DE6B468626FD0B020038F720 /* CocoAttributedStringBuilderExamples */,
+				DECC429E2790BDFA008A4A60 /* CocoAttributedStringBuilder IOS */,
+				DECC42B92790BEFC008A4A60 /* CocoAttributedStringBuilder macOS */,
+				DECC42D42790BF24008A4A60 /* CocoAttributedStringBuilder watchOS */,
+				DECC42EF2790BF39008A4A60 /* CocoAttributedStringBuilder tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DE6B466726FD0A930038F720 /* Resources */ = {
+		DECC429D2790BDFA008A4A60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B467026FD0A930038F720 /* Resources */ = {
+		DECC42B82790BEFC008A4A60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B468526FD0B020038F720 /* Resources */ = {
+		DECC42D32790BF24008A4A60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B469626FD0B030038F720 /* LaunchScreen.storyboard in Resources */,
-				DE6B469326FD0B030038F720 /* Assets.xcassets in Resources */,
-				DE6B469126FD0B020038F720 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42EE2790BF39008A4A60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DE6B466526FD0A930038F720 /* Sources */ = {
+		DECC429B2790BDFA008A4A60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B46B826FD4DD00038F720 /* CocoStringAttributeHolder.swift in Sources */,
-				DE6B46C126FD4EF10038F720 /* Helpers.swift in Sources */,
-				DE6B46A926FD0E650038F720 /* ShadowAttributesBuilder.swift in Sources */,
-				DEC7F1BC27074E4D00CE5EF6 /* AttributeRangeProvider.swift in Sources */,
-				DE689BE527050178002B143E /* TextTabAttributesBuilder.swift in Sources */,
-				DE6B46B226FD264B0038F720 /* NSTextAttachment++Extension.swift in Sources */,
-				DE6B46C326FD55C30038F720 /* NSMutableAttributedString++Extension.swift in Sources */,
-				DE6B469E26FD0DE90038F720 /* CocoAttributedStringBuilder.swift in Sources */,
-				DE6B46A326FD0E2C0038F720 /* ParagraphStyleAttributesBuilder.swift in Sources */,
-				DE6B46A026FD0DE90038F720 /* CocoAttribute.swift in Sources */,
-				DE6B469F26FD0DE90038F720 /* CocoStringBuilder.swift in Sources */,
-				DE6B46B426FD26CB0038F720 /* NSShadow++Extension.swift in Sources */,
-				DE6B46BF26FD4E6D0038F720 /* String++Extension.swift in Sources */,
-				DE6B46A726FD0E600038F720 /* TextAttachmentAttributesBuilder.swift in Sources */,
-				DE6B46B626FD27270038F720 /* NSMutableParagraphStyle++Extension.swift in Sources */,
-				DE6B46BB26FD4DFE0038F720 /* AttributeKeyValueConvertible.swift in Sources */,
+				DECC42A62790BE38008A4A60 /* AttributeKeyValueConvertible.swift in Sources */,
+				DECC42A72790BE38008A4A60 /* AttributeRangeProvider.swift in Sources */,
+				DECC42A82790BE38008A4A60 /* CocoStringAttributeHolder.swift in Sources */,
+				DECC42A92790BE38008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */,
+				DECC42AA2790BE38008A4A60 /* String++Extension.swift in Sources */,
+				DECC42AB2790BE38008A4A60 /* Helpers.swift in Sources */,
+				DECC42AC2790BE38008A4A60 /* NSTextAttachment++Extension.swift in Sources */,
+				DECC42AD2790BE38008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */,
+				DECC42AE2790BE38008A4A60 /* NSShadow++Extension.swift in Sources */,
+				DECC42AF2790BE38008A4A60 /* ShadowAttributesBuilder.swift in Sources */,
+				DECC42B02790BE38008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */,
+				DECC42B12790BE38008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */,
+				DECC42B22790BE38008A4A60 /* TextTabAttributesBuilder.swift in Sources */,
+				DECC42B32790BE38008A4A60 /* CocoAttribute.swift in Sources */,
+				DECC42B42790BE38008A4A60 /* CocoAttributedStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B466E26FD0A930038F720 /* Sources */ = {
+		DECC42B62790BEFC008A4A60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B467826FD0A930038F720 /* CocoAttributedStringBuilderTests.swift in Sources */,
+				DECC42C12790BF0B008A4A60 /* AttributeKeyValueConvertible.swift in Sources */,
+				DECC42C22790BF0B008A4A60 /* AttributeRangeProvider.swift in Sources */,
+				DECC42C32790BF0B008A4A60 /* CocoStringAttributeHolder.swift in Sources */,
+				DECC42C42790BF0B008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */,
+				DECC42C52790BF0B008A4A60 /* String++Extension.swift in Sources */,
+				DECC42C62790BF0B008A4A60 /* Helpers.swift in Sources */,
+				DECC42C72790BF0B008A4A60 /* NSTextAttachment++Extension.swift in Sources */,
+				DECC42C82790BF0B008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */,
+				DECC42C92790BF0B008A4A60 /* NSShadow++Extension.swift in Sources */,
+				DECC42CA2790BF0B008A4A60 /* ShadowAttributesBuilder.swift in Sources */,
+				DECC42CB2790BF0B008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */,
+				DECC42CC2790BF0B008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */,
+				DECC42CD2790BF0B008A4A60 /* TextTabAttributesBuilder.swift in Sources */,
+				DECC42CE2790BF0B008A4A60 /* CocoAttribute.swift in Sources */,
+				DECC42CF2790BF0B008A4A60 /* CocoAttributedStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6B468326FD0B020038F720 /* Sources */ = {
+		DECC42D12790BF24008A4A60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE6B468E26FD0B020038F720 /* ViewController.swift in Sources */,
-				DE6B468A26FD0B020038F720 /* AppDelegate.swift in Sources */,
-				DE6B468C26FD0B020038F720 /* SceneDelegate.swift in Sources */,
+				DECC42DC2790BF30008A4A60 /* AttributeKeyValueConvertible.swift in Sources */,
+				DECC42DD2790BF30008A4A60 /* AttributeRangeProvider.swift in Sources */,
+				DECC42DE2790BF30008A4A60 /* CocoStringAttributeHolder.swift in Sources */,
+				DECC42DF2790BF30008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */,
+				DECC42E02790BF30008A4A60 /* String++Extension.swift in Sources */,
+				DECC42E12790BF30008A4A60 /* Helpers.swift in Sources */,
+				DECC42E22790BF30008A4A60 /* NSTextAttachment++Extension.swift in Sources */,
+				DECC42E32790BF30008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */,
+				DECC42E42790BF30008A4A60 /* NSShadow++Extension.swift in Sources */,
+				DECC42E52790BF30008A4A60 /* ShadowAttributesBuilder.swift in Sources */,
+				DECC42E62790BF30008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */,
+				DECC42E72790BF30008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */,
+				DECC42E82790BF30008A4A60 /* TextTabAttributesBuilder.swift in Sources */,
+				DECC42E92790BF30008A4A60 /* CocoAttribute.swift in Sources */,
+				DECC42EA2790BF30008A4A60 /* CocoAttributedStringBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECC42EC2790BF39008A4A60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DECC42F72790BF48008A4A60 /* AttributeKeyValueConvertible.swift in Sources */,
+				DECC42F82790BF48008A4A60 /* AttributeRangeProvider.swift in Sources */,
+				DECC42F92790BF48008A4A60 /* CocoStringAttributeHolder.swift in Sources */,
+				DECC42FA2790BF48008A4A60 /* NSMutableAttributedString++Extension.swift in Sources */,
+				DECC42FB2790BF48008A4A60 /* String++Extension.swift in Sources */,
+				DECC42FC2790BF48008A4A60 /* Helpers.swift in Sources */,
+				DECC42FD2790BF48008A4A60 /* NSTextAttachment++Extension.swift in Sources */,
+				DECC42FE2790BF48008A4A60 /* TextAttachmentAttributesBuilder.swift in Sources */,
+				DECC42FF2790BF48008A4A60 /* NSShadow++Extension.swift in Sources */,
+				DECC43002790BF48008A4A60 /* ShadowAttributesBuilder.swift in Sources */,
+				DECC43012790BF48008A4A60 /* NSMutableParagraphStyle++Extension.swift in Sources */,
+				DECC43022790BF48008A4A60 /* ParagraphStyleAttributesBuilder.swift in Sources */,
+				DECC43032790BF48008A4A60 /* TextTabAttributesBuilder.swift in Sources */,
+				DECC43042790BF48008A4A60 /* CocoAttribute.swift in Sources */,
+				DECC43052790BF48008A4A60 /* CocoAttributedStringBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DE6B467526FD0A930038F720 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE6B466826FD0A930038F720 /* CocoAttributedStringBuilder */;
-			targetProxy = DE6B467426FD0A930038F720 /* PBXContainerItemProxy */;
-		};
-		DE6B46AE26FD11200038F720 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DE6B466826FD0A930038F720 /* CocoAttributedStringBuilder */;
-			targetProxy = DE6B46AD26FD11200038F720 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		DE6B468F26FD0B020038F720 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE6B469026FD0B020038F720 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DE6B469426FD0B030038F720 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DE6B469526FD0B030038F720 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DE6B467B26FD0A930038F720 /* Debug */ = {
@@ -603,138 +655,251 @@
 			};
 			name = Release;
 		};
-		DE6B467E26FD0A930038F720 /* Debug */ = {
+		DECC42A42790BDFA008A4A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 88P363PJC9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CocoAttributedStringBuilder/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilder;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DE6B467F26FD0A930038F720 /* Release */ = {
+		DECC42A52790BDFA008A4A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 88P363PJC9;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CocoAttributedStringBuilder/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilder;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		DE6B468126FD0A930038F720 /* Debug */ = {
+		DECC42BF2790BEFC008A4A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 88P363PJC9;
-				INFOPLIST_FILE = CocoAttributedStringBuilderTests/Info.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DE6B468226FD0A930038F720 /* Release */ = {
+		DECC42C02790BEFC008A4A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 88P363PJC9;
-				INFOPLIST_FILE = CocoAttributedStringBuilderTests/Info.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/Frameworks",
+					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		DE6B469926FD0B030038F720 /* Debug */ = {
+		DECC42DA2790BF24008A4A60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 88P363PJC9;
-				INFOPLIST_FILE = CocoAttributedStringBuilderExamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilderExamples;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		DE6B469A26FD0B030038F720 /* Release */ = {
+		DECC42DB2790BF24008A4A60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 88P363PJC9;
-				INFOPLIST_FILE = CocoAttributedStringBuilderExamples/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = KiarashVosough.CocoAttributedStringBuilderExamples;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		DECC42F52790BF39008A4A60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		DECC42F62790BF39008A4A60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kiarashvosough.Apple.CocoAttributedStringBuilder-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -750,29 +915,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE6B467D26FD0A930038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder" */ = {
+		DECC42A32790BDFA008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder IOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE6B467E26FD0A930038F720 /* Debug */,
-				DE6B467F26FD0A930038F720 /* Release */,
+				DECC42A42790BDFA008A4A60 /* Debug */,
+				DECC42A52790BDFA008A4A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE6B468026FD0A930038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilderTests" */ = {
+		DECC42BE2790BEFC008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE6B468126FD0A930038F720 /* Debug */,
-				DE6B468226FD0A930038F720 /* Release */,
+				DECC42BF2790BEFC008A4A60 /* Debug */,
+				DECC42C02790BEFC008A4A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE6B469826FD0B030038F720 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilderExamples" */ = {
+		DECC42D92790BF24008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE6B469926FD0B030038F720 /* Debug */,
-				DE6B469A26FD0B030038F720 /* Release */,
+				DECC42DA2790BF24008A4A60 /* Debug */,
+				DECC42DB2790BF24008A4A60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DECC42F42790BF39008A4A60 /* Build configuration list for PBXNativeTarget "CocoAttributedStringBuilder tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DECC42F52790BF39008A4A60 /* Debug */,
+				DECC42F62790BF39008A4A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

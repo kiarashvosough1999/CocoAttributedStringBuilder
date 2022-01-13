@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
 
   spec.name         = "CocoAttributedStringBuilder"
-  spec.version      = "0.3.1"
+  spec.version      = "1.0.0"
   spec.summary      = "Pure swift library to build NSAttributedString"
 
 
@@ -31,22 +31,25 @@ Pod::Spec.new do |spec|
   # spec.social_media_url   = "https://twitter.com/kiarashvosough1999"
 
 
-  spec.platform     = :ios
-  spec.platform     = :ios, "9.0"
+  # spec.platform     = :ios
+  # spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
-  # spec.ios.deployment_target = "5.0"
-  # spec.osx.deployment_target = "10.7"
-  # spec.watchos.deployment_target = "2.0"
-  # spec.tvos.deployment_target = "9.0"
+  spec.ios.deployment_target = "9.0"
+  spec.osx.deployment_target = "10.10"
+  spec.watchos.deployment_target = "2.0"
+  spec.tvos.deployment_target = "9.0"
 
   spec.source = { :git => "https://github.com/kiarashvosough1999/CocoAttributedStringBuilder.git", :tag => "#{spec.version}" }
 
-  spec.source_files  =  "CocoAttributedStringBuilder/**/*.{h,m,swift}"
+  spec.source_files  =  "Sources/**/*.{h,m,swift}"
   spec.exclude_files = "Classes/Exclude"
   
   spec.swift_versions = ['5.3', '5.4' , '5.5']
-  spec.framework = "UIKit"
+  
+  spec.framework      = ['Foundation', 'CoreGraphics']
+  spec.ios.framework  = 'UIKit'
+  spec.osx.framework  = 'AppKit'
 
   # spec.public_header_files = "Classes/**/*.h"
 
