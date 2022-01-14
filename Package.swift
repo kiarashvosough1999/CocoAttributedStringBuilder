@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "CocoAttributedStringBuilder",
             path: "Sources",
-            exclude: ["Info.plist", "./resources"],
+            exclude: ["Info.plist", "/resources", "/macOS-Example", "/IOS-Example"],
             linkerSettings: [
                 .linkedFramework("UIKit",
                                  .when(platforms: [
