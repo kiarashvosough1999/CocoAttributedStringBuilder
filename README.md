@@ -14,9 +14,9 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [SampleProjects](#Sample)
-- [Usage](#Usage)
-- [Contributors](#Contributors)
+- [SampleProjects](#sample)
+- [Usage](#usage)
+- [Contributors](#contributors)
 - [License](#license)
 
 ## Features
@@ -34,7 +34,7 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 
 | Platform | Minimum Swift Version | Installation | Status |
 | --- | --- | --- | --- |
-| iOS 9.0+ | 5.3 | [CocoaPods](#cocoapods) | Tested |
+| iOS 9.0+ / macCatalyst 10.15+ / macOS 10.9+ / tvOS 9.0+ / watchOS 2.0+ | 5.3 | [CocoaPods](#cocoapods) / [Swift Package Manager](#swift-package-manager) | Tested |
 
 ## Installation
 
@@ -46,9 +46,21 @@ CocoAttributedStringBuilder: Elegant and Easy AttributedStringBuilder in Swift
 pod 'CocoAttributedStringBuilder'
 ```
 
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler. It is in early development, but CocoAttributedStringBuilder does support its use on supported platforms.
+
+Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/kiarashvosough1999/CocoAttributedStringBuilder.git")
+]
+```
+
 ## Sample
 
-I have provided one sample project in the repository. To use it clone the repo, Source files for these are in the `CocoAttributedStringBuilderExamples` directory in project navigator. Have fun!
+I have provided two sample project in the repository. To use it clone the repo, Source files for these are in the `IOS-Example` and `macOS-Example` directory in project navigator. Have fun!
 
 ## Usage
 
