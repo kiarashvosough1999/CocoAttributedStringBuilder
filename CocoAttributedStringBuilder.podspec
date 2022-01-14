@@ -50,6 +50,8 @@ Pod::Spec.new do |spec|
   spec.framework      = ['Foundation', 'CoreGraphics']
   spec.ios.framework  = 'UIKit'
   spec.osx.framework  = 'AppKit'
+  spec.tvos.framework  = 'UIKit'
+  spec.watchos.framework  = 'UIKit'
 
   # spec.public_header_files = "Classes/**/*.h"
 
