@@ -70,10 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DEA9C7A02790C1FD00F3B091 /* CocoAttributedStringBuilder_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_IOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-iphoneos/CocoAttributedStringBuilder_IOS.framework"; sourceTree = "<absolute>"; };
-		DEA9C7A12790C1FD00F3B091 /* CocoAttributedStringBuilder_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_macOS.framework; path = /Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug/CocoAttributedStringBuilder_macOS.framework; sourceTree = "<absolute>"; };
-		DEA9C7A22790C1FD00F3B091 /* CocoAttributedStringBuilder_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_watchOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-watchos/CocoAttributedStringBuilder_watchOS.framework"; sourceTree = "<absolute>"; };
-		DEA9C7A32790C1FD00F3B091 /* CocoAttributedStringBuilder_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_tvOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-appletvos/CocoAttributedStringBuilder_tvOS.framework"; sourceTree = "<absolute>"; };
+		DE27B9A32791855F00D8DFB5 /* CocoAttributedStringBuilder_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_IOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-iphoneos/CocoAttributedStringBuilder_IOS.framework"; sourceTree = "<absolute>"; };
+		DE27B9A42791855F00D8DFB5 /* CocoAttributedStringBuilder_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_macOS.framework; path = /Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug/CocoAttributedStringBuilder_macOS.framework; sourceTree = "<absolute>"; };
+		DE27B9A52791855F00D8DFB5 /* CocoAttributedStringBuilder_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_watchOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-watchos/CocoAttributedStringBuilder_watchOS.framework"; sourceTree = "<absolute>"; };
+		DE27B9A62791855F00D8DFB5 /* CocoAttributedStringBuilder_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoAttributedStringBuilder_tvOS.framework; path = "/Users/kiarashvosough/Desktop/Project/CocoAttributedStringBuilder/build/Debug-appletvos/CocoAttributedStringBuilder_tvOS.framework"; sourceTree = "<absolute>"; };
 		DECC42232790B95A008A4A60 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		DECC42252790B95A008A4A60 /* CocoAttributedStringBuilder.podspec.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = CocoAttributedStringBuilder.podspec.zip; sourceTree = "<group>"; };
 		DECC42262790B95A008A4A60 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 			);
 			name = "CocoAttributedStringBuilder IOS";
 			productName = "CocoAttributedStringBuilder IOS";
-			productReference = DEA9C7A02790C1FD00F3B091 /* CocoAttributedStringBuilder_IOS.framework */;
+			productReference = DE27B9A32791855F00D8DFB5 /* CocoAttributedStringBuilder_IOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42B92790BEFC008A4A60 /* CocoAttributedStringBuilder macOS */ = {
@@ -327,7 +327,7 @@
 			);
 			name = "CocoAttributedStringBuilder macOS";
 			productName = "CocoAttributedStringBuilder macOS";
-			productReference = DEA9C7A12790C1FD00F3B091 /* CocoAttributedStringBuilder_macOS.framework */;
+			productReference = DE27B9A42791855F00D8DFB5 /* CocoAttributedStringBuilder_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42D42790BF24008A4A60 /* CocoAttributedStringBuilder watchOS */ = {
@@ -345,7 +345,7 @@
 			);
 			name = "CocoAttributedStringBuilder watchOS";
 			productName = "CocoAttributedStringBuilder watchOS";
-			productReference = DEA9C7A22790C1FD00F3B091 /* CocoAttributedStringBuilder_watchOS.framework */;
+			productReference = DE27B9A52791855F00D8DFB5 /* CocoAttributedStringBuilder_watchOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DECC42EF2790BF39008A4A60 /* CocoAttributedStringBuilder tvOS */ = {
@@ -363,7 +363,7 @@
 			);
 			name = "CocoAttributedStringBuilder tvOS";
 			productName = "CocoAttributedStringBuilder tvOS";
-			productReference = DEA9C7A32790C1FD00F3B091 /* CocoAttributedStringBuilder_tvOS.framework */;
+			productReference = DE27B9A62791855F00D8DFB5 /* CocoAttributedStringBuilder_tvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
