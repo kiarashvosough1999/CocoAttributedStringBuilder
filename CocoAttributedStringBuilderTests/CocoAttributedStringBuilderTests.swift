@@ -493,4 +493,114 @@ final class CocoAttributedStringBuilderTests: XCTestCase {
         let shadow = result.attribute(.shadow, at: 0, effectiveRange: &range) as? NSShadow
         XCTAssertNotNil(shadow)
     }
+
+    // MARK: - CocoStringBuilder → [NSAttributedString.Key: Any]
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_SingleAttribute() {
+        @CocoStringBuilder
+        func globalUIBarButtonItemTitleText() -> [NSAttributedString.Key: Any] {
+            CocoAttribute.font(.systemFont(ofSize: 14, weight: .medium))
+        }
+        let attrs = globalUIBarButtonItemTitleText()
+        XCTAssertEqual(attrs.count, 1)
+        let font = attrs[.font] as? UIFont
+        XCTAssertNotNil(font)
+        XCTAssertEqual(font?.pointSize, 14)
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_MultipleAttributes() {
+        @CocoStringBuilder
+        func barButtonAttributes() -> [NSAttributedString.Key: Any] {
+            CocoAttribute.font(.systemFont(ofSize: 12, weight: .semibold))
+            CocoAttribute.foregroundColor(.red)
+        }
+        let attrs = barButtonAttributes()
+        XCTAssertEqual(attrs.count, 2)
+        let font = attrs[.font] as? UIFont
+        XCTAssertNotNil(font)
+        XCTAssertEqual(font?.pointSize, 12)
+        let color = attrs[.foregroundColor] as? UIColor
+        XCTAssertNotNil(color)
+        XCTAssertTrue(color?.isEqual(UIColor.red) ?? false)
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_IfTrue() {
+        let addColor = true
+        @CocoStringBuilder
+        func attrs() -> [NSAttributedString.Key: Any] {
+            CocoAttribute.font(.systemFont(ofSize: 10))
+            if addColor {
+                CocoAttribute.foregroundColor(.blue)
+            }
+        }
+        let result = attrs()
+        XCTAssertEqual(result.count, 2)
+        XCTAssertNotNil(result[.font])
+        XCTAssertTrue((result[.foregroundColor] as? UIColor)?.isEqual(UIColor.blue) ?? false)
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_IfFalse() {
+        let addColor = false
+        @CocoStringBuilder
+        func attrs() -> [NSAttributedString.Key: Any] {
+            CocoAttribute.font(.systemFont(ofSize: 10))
+            if addColor {
+                CocoAttribute.foregroundColor(.blue)
+            }
+        }
+        let result = attrs()
+        XCTAssertEqual(result.count, 1)
+        XCTAssertNotNil(result[.font])
+        XCTAssertNil(result[.foregroundColor])
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_IfElse() {
+        let useRed = true
+        @CocoStringBuilder
+        func attrs() -> [NSAttributedString.Key: Any] {
+            if useRed {
+                CocoAttribute.foregroundColor(.red)
+            } else {
+                CocoAttribute.foregroundColor(.blue)
+            }
+        }
+        var result = attrs()
+        XCTAssertEqual(result.count, 1)
+        XCTAssertTrue((result[.foregroundColor] as? UIColor)?.isEqual(UIColor.red) ?? false)
+
+        let useRedFalse = false
+        @CocoStringBuilder
+        func attrsElse() -> [NSAttributedString.Key: Any] {
+            if useRedFalse {
+                CocoAttribute.foregroundColor(.red)
+            } else {
+                CocoAttribute.foregroundColor(.blue)
+            }
+        }
+        result = attrsElse()
+        XCTAssertTrue((result[.foregroundColor] as? UIColor)?.isEqual(UIColor.blue) ?? false)
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_Empty() {
+        let include = false
+        @CocoStringBuilder
+        func attrs() -> [NSAttributedString.Key: Any] {
+            if include {
+                CocoAttribute.foregroundColor(.red)
+            }
+        }
+        let result = attrs()
+        XCTAssertTrue(result.isEmpty)
+    }
+
+    func testCocoStringBuilder_ReturnsAttributesDictionary_UniquingKeysWithLastWins() {
+        @CocoStringBuilder
+        func attrs() -> [NSAttributedString.Key: Any] {
+            CocoAttribute.foregroundColor(.red)
+            CocoAttribute.foregroundColor(.blue)
+        }
+        let result = attrs()
+        XCTAssertEqual(result.count, 1)
+        XCTAssertTrue((result[.foregroundColor] as? UIColor)?.isEqual(UIColor.blue) ?? false)
+    }
 }
