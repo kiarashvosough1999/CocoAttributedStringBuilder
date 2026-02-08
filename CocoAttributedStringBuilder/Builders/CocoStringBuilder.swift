@@ -74,4 +74,15 @@ public struct CocoStringBuilder {
     public static func buildArray(_ components: [[CocoStringAttributeHolder]]) -> [CocoStringAttributeHolder] {
         components.flatMap { $0 }
     }
+    
+    // MARK: - Final result (identity for existing closure-based usage)
+    public static func buildFinalResult(_ component: [CocoStringAttributeHolder]) -> [CocoStringAttributeHolder] {
+        component
+    }
+    
+    /// Converts built attributes to a dictionary, e.g. for `UIBarButtonItem.setTitleTextAttributes(_:for:)`.
+    /// Use when the function return type is `[NSAttributedString.Key: Any]`.
+    public static func buildFinalResult(_ component: [CocoStringAttributeHolder]) -> [NSAttributedString.Key: Any] {
+        Dictionary(component.map { ($0.key, $0.value) }, uniquingKeysWith: { _, last in last })
+    }
 }
