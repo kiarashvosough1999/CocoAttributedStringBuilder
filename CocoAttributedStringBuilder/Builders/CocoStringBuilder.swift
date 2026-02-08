@@ -45,7 +45,33 @@ public struct CocoString {
 @resultBuilder
 public struct CocoStringBuilder {
     
-    public static func buildBlock(_ components: AttributeKeyValueConvertible...) -> [CocoStringAttributeHolder] {
-        components.map { $0.attribute }
+    /// Converts a single attribute to the builder's array type so control flow and plain attributes can be mixed.
+    public static func buildExpression(_ expression: AttributeKeyValueConvertible) -> [CocoStringAttributeHolder] {
+        [expression.attribute]
+    }
+    
+    /// Pass-through for array results (e.g. from optional/either/array or explicit empty array).
+    public static func buildExpression(_ expression: [CocoStringAttributeHolder]) -> [CocoStringAttributeHolder] {
+        expression
+    }
+    
+    public static func buildBlock(_ components: [CocoStringAttributeHolder]...) -> [CocoStringAttributeHolder] {
+        components.flatMap { $0 }
+    }
+    
+    public static func buildOptional(_ component: [CocoStringAttributeHolder]?) -> [CocoStringAttributeHolder] {
+        component ?? []
+    }
+    
+    public static func buildEither(first component: [CocoStringAttributeHolder]) -> [CocoStringAttributeHolder] {
+        component
+    }
+    
+    public static func buildEither(second component: [CocoStringAttributeHolder]) -> [CocoStringAttributeHolder] {
+        component
+    }
+    
+    public static func buildArray(_ components: [[CocoStringAttributeHolder]]) -> [CocoStringAttributeHolder] {
+        components.flatMap { $0 }
     }
 }
