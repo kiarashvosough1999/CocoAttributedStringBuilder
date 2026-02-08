@@ -30,7 +30,27 @@ import UIKit
 @resultBuilder
 public struct CocoAttributedStringBuilder {
     
-    public static func buildBlock(_ components: CocoString...) -> NSAttributedString {
-        return NSMutableAttributedString(by: components)
+    public static func buildExpression(_ expression: CocoString) -> NSAttributedString {
+        expression.attributedString
+    }
+    
+    public static func buildBlock(_ components: NSAttributedString...) -> NSAttributedString {
+        NSMutableAttributedString(attributedStrings: components)
+    }
+    
+    public static func buildOptional(_ component: NSAttributedString?) -> NSAttributedString {
+        component ?? NSAttributedString()
+    }
+    
+    public static func buildEither(first component: NSAttributedString) -> NSAttributedString {
+        component
+    }
+    
+    public static func buildEither(second component: NSAttributedString) -> NSAttributedString {
+        component
+    }
+    
+    public static func buildArray(_ components: [NSAttributedString]) -> NSAttributedString {
+        NSMutableAttributedString(attributedStrings: components)
     }
 }

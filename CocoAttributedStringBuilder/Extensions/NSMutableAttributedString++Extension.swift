@@ -34,6 +34,11 @@ extension NSMutableAttributedString {
         appending.forEach { append($0.attributedString) }
     }
     
+    convenience init(attributedStrings: [NSAttributedString]) {
+        self.init()
+        attributedStrings.forEach { append($0) }
+    }
+    
     convenience init(string: String, with attributes: [CocoStringAttributeHolder]) {
         self.init(string: string)
         attributes.forEach { addAttribute($0.key, value: $0.value, range: generateNSRange(from: $0.range))}
